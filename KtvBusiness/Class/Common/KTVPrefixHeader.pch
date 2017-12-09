@@ -1,0 +1,15 @@
+//
+//  KTVPrefixHeader.pch
+//  KtvBusiness
+//
+//  Created by pingjun lin on 2017/12/9.
+//  Copyright © 2017年 ktv. All rights reserved.
+//
+
+#ifndef KTVPrefixHeader_pch
+#define KTVPrefixHeader_pch
+
+#import "KTVCommonDefine.h"
+#import "KTVImportHeader.h"
+
+#endif /* KTVPrefixHeader_pch */
