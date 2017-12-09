@@ -1,0 +1,1188 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3330350F1FDBBBAE001B47D7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3330350D1FDBBBAE001B47D7 /* Main.storyboard */; };
+		333035111FDBBBAE001B47D7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 333035101FDBBBAE001B47D7 /* Assets.xcassets */; };
+		333035141FDBBBAE001B47D7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 333035121FDBBBAE001B47D7 /* LaunchScreen.storyboard */; };
+		333035211FDBBBAE001B47D7 /* KtvBusinessTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 333035201FDBBBAE001B47D7 /* KtvBusinessTests.m */; };
+		3330352C1FDBBBAE001B47D7 /* KtvBusinessUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3330352B1FDBBBAE001B47D7 /* KtvBusinessUITests.m */; };
+		333035471FDBC7F7001B47D7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 333035461FDBC7F7001B47D7 /* AppDelegate.m */; };
+		3330354A1FDBC809001B47D7 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 333035481FDBC809001B47D7 /* Info.plist */; };
+		3330354B1FDBC809001B47D7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 333035491FDBC809001B47D7 /* main.m */; };
+		333035591FDBC9BE001B47D7 /* KTVBaseTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 333035571FDBC9BE001B47D7 /* KTVBaseTabBarViewController.m */; };
+		3330355C1FDBC9EF001B47D7 /* KTVBaseNavigationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3330355B1FDBC9EF001B47D7 /* KTVBaseNavigationViewController.m */; };
+		3330355F1FDBC9F7001B47D7 /* KTVBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3330355D1FDBC9F6001B47D7 /* KTVBaseViewController.m */; };
+		333035781FDBCA3A001B47D7 /* MBProgressHUD+KTV.m in Sources */ = {isa = PBXBuildFile; fileRef = 333035601FDBCA38001B47D7 /* MBProgressHUD+KTV.m */; };
+		333035791FDBCA3A001B47D7 /* UIImage+extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 333035621FDBCA38001B47D7 /* UIImage+extension.m */; };
+		3330357A1FDBCA3A001B47D7 /* UIViewController+StoryboardHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 333035641FDBCA39001B47D7 /* UIViewController+StoryboardHelper.m */; };
+		3330357B1FDBCA3A001B47D7 /* UINavigationBar+background.m in Sources */ = {isa = PBXBuildFile; fileRef = 333035661FDBCA39001B47D7 /* UINavigationBar+background.m */; };
+		3330357C1FDBCA3A001B47D7 /* UIView+extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 333035671FDBCA39001B47D7 /* UIView+extension.m */; };
+		3330357D1FDBCA3A001B47D7 /* UIButton+KTVExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3330356D1FDBCA39001B47D7 /* UIButton+KTVExtension.m */; };
+		3330357E1FDBCA3A001B47D7 /* UIImageView+extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 3330356E1FDBCA39001B47D7 /* UIImageView+extension.m */; };
+		3330357F1FDBCA3A001B47D7 /* NSDate+Processing.m in Sources */ = {isa = PBXBuildFile; fileRef = 3330356F1FDBCA39001B47D7 /* NSDate+Processing.m */; };
+		333035801FDBCA3A001B47D7 /* UIColor+KTVExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 333035711FDBCA39001B47D7 /* UIColor+KTVExtension.m */; };
+		333035811FDBCA3A001B47D7 /* UIColor+KTVSkin.m in Sources */ = {isa = PBXBuildFile; fileRef = 333035741FDBCA3A001B47D7 /* UIColor+KTVSkin.m */; };
+		333035821FDBCA3A001B47D7 /* UILabel+Ktv.m in Sources */ = {isa = PBXBuildFile; fileRef = 333035761FDBCA3A001B47D7 /* UILabel+Ktv.m */; };
+		333035831FDBCA3A001B47D7 /* UIFont+Ktv.m in Sources */ = {isa = PBXBuildFile; fileRef = 333035771FDBCA3A001B47D7 /* UIFont+Ktv.m */; };
+		333035891FDBCF6B001B47D7 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 333035881FDBCF6B001B47D7 /* Home.storyboard */; };
+		3330358B1FDBCFB5001B47D7 /* Hall.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3330358A1FDBCFB5001B47D7 /* Hall.storyboard */; };
+		3330358D1FDBCFE1001B47D7 /* Info.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3330358C1FDBCFE1001B47D7 /* Info.storyboard */; };
+		3330358F1FDBCFF1001B47D7 /* Mine.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3330358E1FDBCFF1001B47D7 /* Mine.storyboard */; };
+		333035AA1FDBD8DB001B47D7 /* KTVHomeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 333035A91FDBD8DB001B47D7 /* KTVHomeController.m */; };
+		333035AD1FDBD8F4001B47D7 /* KTVHallController.m in Sources */ = {isa = PBXBuildFile; fileRef = 333035AC1FDBD8F4001B47D7 /* KTVHallController.m */; };
+		333035B01FDBD90C001B47D7 /* KTVInfoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 333035AF1FDBD90C001B47D7 /* KTVInfoController.m */; };
+		333035B31FDBD91B001B47D7 /* KTVMineController.m in Sources */ = {isa = PBXBuildFile; fileRef = 333035B21FDBD91B001B47D7 /* KTVMineController.m */; };
+		333035BC1FDBE6DA001B47D7 /* KTVAlertController.m in Sources */ = {isa = PBXBuildFile; fileRef = 333035B41FDBE6D9001B47D7 /* KTVAlertController.m */; };
+		333035BD1FDBE6DA001B47D7 /* KTVToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 333035B71FDBE6D9001B47D7 /* KTVToast.m */; };
+		333035BE1FDBE6DA001B47D7 /* KTVUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 333035B81FDBE6D9001B47D7 /* KTVUtil.m */; };
+		333035BF1FDBE6DA001B47D7 /* KTVCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 333035BB1FDBE6DA001B47D7 /* KTVCommon.m */; };
+		333035C81FDBE777001B47D7 /* KTVUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 333035C71FDBE777001B47D7 /* KTVUser.m */; };
+		333035CB1FDBE796001B47D7 /* KTVAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = 333035CA1FDBE796001B47D7 /* KTVAddress.m */; };
+		333035D31FDBE7FE001B47D7 /* KTVNetworkHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 333035CD1FDBE7FE001B47D7 /* KTVNetworkHelper.m */; };
+		333035D41FDBE7FE001B47D7 /* KTVRequestMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 333035CE1FDBE7FE001B47D7 /* KTVRequestMessage.m */; };
+		333035D51FDBE7FE001B47D7 /* KTVUrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 333035D11FDBE7FE001B47D7 /* KTVUrl.m */; };
+		D0BF6BD695C10CBF62CFFEBD /* libPods-KtvBusiness.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 02515D6F93BCC4CD75667549 /* libPods-KtvBusiness.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3330351D1FDBBBAE001B47D7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 333034FC1FDBBBAE001B47D7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 333035031FDBBBAE001B47D7;
+			remoteInfo = KtvBusiness;
+		};
+		333035281FDBBBAE001B47D7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 333034FC1FDBBBAE001B47D7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 333035031FDBBBAE001B47D7;
+			remoteInfo = KtvBusiness;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		02515D6F93BCC4CD75667549 /* libPods-KtvBusiness.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-KtvBusiness.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		333035041FDBBBAE001B47D7 /* KtvBusiness.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KtvBusiness.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3330350E1FDBBBAE001B47D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		333035101FDBBBAE001B47D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		333035131FDBBBAE001B47D7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3330351C1FDBBBAE001B47D7 /* KtvBusinessTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KtvBusinessTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		333035201FDBBBAE001B47D7 /* KtvBusinessTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KtvBusinessTests.m; sourceTree = "<group>"; };
+		333035221FDBBBAE001B47D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		333035271FDBBBAE001B47D7 /* KtvBusinessUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KtvBusinessUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3330352B1FDBBBAE001B47D7 /* KtvBusinessUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KtvBusinessUITests.m; sourceTree = "<group>"; };
+		3330352D1FDBBBAE001B47D7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		333035451FDBC7F7001B47D7 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		333035461FDBC7F7001B47D7 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		333035481FDBC809001B47D7 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		333035491FDBC809001B47D7 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		333035571FDBC9BE001B47D7 /* KTVBaseTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTVBaseTabBarViewController.m; sourceTree = "<group>"; };
+		333035581FDBC9BE001B47D7 /* KTVBaseTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTVBaseTabBarViewController.h; sourceTree = "<group>"; };
+		3330355A1FDBC9EE001B47D7 /* KTVBaseNavigationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTVBaseNavigationViewController.h; sourceTree = "<group>"; };
+		3330355B1FDBC9EF001B47D7 /* KTVBaseNavigationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTVBaseNavigationViewController.m; sourceTree = "<group>"; };
+		3330355D1FDBC9F6001B47D7 /* KTVBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTVBaseViewController.m; sourceTree = "<group>"; };
+		3330355E1FDBC9F7001B47D7 /* KTVBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTVBaseViewController.h; sourceTree = "<group>"; };
+		333035601FDBCA38001B47D7 /* MBProgressHUD+KTV.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+KTV.m"; sourceTree = "<group>"; };
+		333035611FDBCA38001B47D7 /* UIImage+extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+extension.h"; sourceTree = "<group>"; };
+		333035621FDBCA38001B47D7 /* UIImage+extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+extension.m"; sourceTree = "<group>"; };
+		333035631FDBCA39001B47D7 /* UIViewController+StoryboardHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+StoryboardHelper.h"; sourceTree = "<group>"; };
+		333035641FDBCA39001B47D7 /* UIViewController+StoryboardHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+StoryboardHelper.m"; sourceTree = "<group>"; };
+		333035651FDBCA39001B47D7 /* UINavigationBar+background.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+background.h"; sourceTree = "<group>"; };
+		333035661FDBCA39001B47D7 /* UINavigationBar+background.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+background.m"; sourceTree = "<group>"; };
+		333035671FDBCA39001B47D7 /* UIView+extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+extension.m"; sourceTree = "<group>"; };
+		333035681FDBCA39001B47D7 /* MBProgressHUD+KTV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+KTV.h"; sourceTree = "<group>"; };
+		333035691FDBCA39001B47D7 /* NSDate+Processing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Processing.h"; sourceTree = "<group>"; };
+		3330356A1FDBCA39001B47D7 /* UIView+extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+extension.h"; sourceTree = "<group>"; };
+		3330356B1FDBCA39001B47D7 /* UIButton+KTVExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+KTVExtension.h"; sourceTree = "<group>"; };
+		3330356C1FDBCA39001B47D7 /* UIColor+KTVSkin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+KTVSkin.h"; sourceTree = "<group>"; };
+		3330356D1FDBCA39001B47D7 /* UIButton+KTVExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+KTVExtension.m"; sourceTree = "<group>"; };
+		3330356E1FDBCA39001B47D7 /* UIImageView+extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+extension.m"; sourceTree = "<group>"; };
+		3330356F1FDBCA39001B47D7 /* NSDate+Processing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Processing.m"; sourceTree = "<group>"; };
+		333035701FDBCA39001B47D7 /* UIFont+Ktv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+Ktv.h"; sourceTree = "<group>"; };
+		333035711FDBCA39001B47D7 /* UIColor+KTVExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+KTVExtension.m"; sourceTree = "<group>"; };
+		333035721FDBCA39001B47D7 /* UIColor+KTVExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+KTVExtension.h"; sourceTree = "<group>"; };
+		333035731FDBCA3A001B47D7 /* UIImageView+extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+extension.h"; sourceTree = "<group>"; };
+		333035741FDBCA3A001B47D7 /* UIColor+KTVSkin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+KTVSkin.m"; sourceTree = "<group>"; };
+		333035751FDBCA3A001B47D7 /* UILabel+Ktv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Ktv.h"; sourceTree = "<group>"; };
+		333035761FDBCA3A001B47D7 /* UILabel+Ktv.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Ktv.m"; sourceTree = "<group>"; };
+		333035771FDBCA3A001B47D7 /* UIFont+Ktv.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+Ktv.m"; sourceTree = "<group>"; };
+		333035841FDBCADD001B47D7 /* KTVCommonDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTVCommonDefine.h; sourceTree = "<group>"; };
+		333035851FDBCB02001B47D7 /* KTVImportHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTVImportHeader.h; sourceTree = "<group>"; };
+		333035871FDBCB7C001B47D7 /* KTVPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTVPrefixHeader.pch; sourceTree = "<group>"; };
+		333035881FDBCF6B001B47D7 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		3330358A1FDBCFB5001B47D7 /* Hall.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Hall.storyboard; sourceTree = "<group>"; };
+		3330358C1FDBCFE1001B47D7 /* Info.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Info.storyboard; sourceTree = "<group>"; };
+		3330358E1FDBCFF1001B47D7 /* Mine.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Mine.storyboard; sourceTree = "<group>"; };
+		333035A81FDBD8DB001B47D7 /* KTVHomeController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTVHomeController.h; sourceTree = "<group>"; };
+		333035A91FDBD8DB001B47D7 /* KTVHomeController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTVHomeController.m; sourceTree = "<group>"; };
+		333035AB1FDBD8F4001B47D7 /* KTVHallController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTVHallController.h; sourceTree = "<group>"; };
+		333035AC1FDBD8F4001B47D7 /* KTVHallController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTVHallController.m; sourceTree = "<group>"; };
+		333035AE1FDBD90C001B47D7 /* KTVInfoController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTVInfoController.h; sourceTree = "<group>"; };
+		333035AF1FDBD90C001B47D7 /* KTVInfoController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTVInfoController.m; sourceTree = "<group>"; };
+		333035B11FDBD91B001B47D7 /* KTVMineController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTVMineController.h; sourceTree = "<group>"; };
+		333035B21FDBD91B001B47D7 /* KTVMineController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTVMineController.m; sourceTree = "<group>"; };
+		333035B41FDBE6D9001B47D7 /* KTVAlertController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTVAlertController.m; sourceTree = "<group>"; };
+		333035B51FDBE6D9001B47D7 /* KTVCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTVCommon.h; sourceTree = "<group>"; };
+		333035B61FDBE6D9001B47D7 /* KTVToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTVToast.h; sourceTree = "<group>"; };
+		333035B71FDBE6D9001B47D7 /* KTVToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTVToast.m; sourceTree = "<group>"; };
+		333035B81FDBE6D9001B47D7 /* KTVUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTVUtil.m; sourceTree = "<group>"; };
+		333035B91FDBE6D9001B47D7 /* KTVAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTVAlertController.h; sourceTree = "<group>"; };
+		333035BA1FDBE6DA001B47D7 /* KTVUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTVUtil.h; sourceTree = "<group>"; };
+		333035BB1FDBE6DA001B47D7 /* KTVCommon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTVCommon.m; sourceTree = "<group>"; };
+		333035C61FDBE777001B47D7 /* KTVUser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTVUser.h; sourceTree = "<group>"; };
+		333035C71FDBE777001B47D7 /* KTVUser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTVUser.m; sourceTree = "<group>"; };
+		333035C91FDBE796001B47D7 /* KTVAddress.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTVAddress.h; sourceTree = "<group>"; };
+		333035CA1FDBE796001B47D7 /* KTVAddress.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTVAddress.m; sourceTree = "<group>"; };
+		333035CD1FDBE7FE001B47D7 /* KTVNetworkHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTVNetworkHelper.m; sourceTree = "<group>"; };
+		333035CE1FDBE7FE001B47D7 /* KTVRequestMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTVRequestMessage.m; sourceTree = "<group>"; };
+		333035CF1FDBE7FE001B47D7 /* KTVUrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTVUrl.h; sourceTree = "<group>"; };
+		333035D01FDBE7FE001B47D7 /* KTVNetworkHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTVNetworkHelper.h; sourceTree = "<group>"; };
+		333035D11FDBE7FE001B47D7 /* KTVUrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTVUrl.m; sourceTree = "<group>"; };
+		333035D21FDBE7FE001B47D7 /* KTVRequestMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTVRequestMessage.h; sourceTree = "<group>"; };
+		333035D61FDBE84D001B47D7 /* KTVToastDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTVToastDefine.h; sourceTree = "<group>"; };
+		8DB56BC54F00028E85D26D59 /* Pods-KtvBusiness.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KtvBusiness.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KtvBusiness/Pods-KtvBusiness.debug.xcconfig"; sourceTree = "<group>"; };
+		DCAB3D469F83DB0C9413AC02 /* Pods-KtvBusiness.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KtvBusiness.release.xcconfig"; path = "Pods/Target Support Files/Pods-KtvBusiness/Pods-KtvBusiness.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		333035011FDBBBAE001B47D7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D0BF6BD695C10CBF62CFFEBD /* libPods-KtvBusiness.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		333035191FDBBBAE001B47D7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		333035241FDBBBAE001B47D7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		333034FB1FDBBBAE001B47D7 = {
+			isa = PBXGroup;
+			children = (
+				333035061FDBBBAE001B47D7 /* KtvBusiness */,
+				3330351F1FDBBBAE001B47D7 /* KtvBusinessTests */,
+				3330352A1FDBBBAE001B47D7 /* KtvBusinessUITests */,
+				333035051FDBBBAE001B47D7 /* Products */,
+				8E2EE5CA3CD691D91EA9E5A7 /* Pods */,
+				FE41F39B4B29D284D3DF6C95 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		333035051FDBBBAE001B47D7 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				333035041FDBBBAE001B47D7 /* KtvBusiness.app */,
+				3330351C1FDBBBAE001B47D7 /* KtvBusinessTests.xctest */,
+				333035271FDBBBAE001B47D7 /* KtvBusinessUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		333035061FDBBBAE001B47D7 /* KtvBusiness */ = {
+			isa = PBXGroup;
+			children = (
+				3330353F1FDBC77D001B47D7 /* App */,
+				3330353E1FDBC77D001B47D7 /* Class */,
+				3330353B1FDBC77D001B47D7 /* Resources */,
+				333035401FDBC7C7001B47D7 /* Supporting Files */,
+				3330350D1FDBBBAE001B47D7 /* Main.storyboard */,
+				333035101FDBBBAE001B47D7 /* Assets.xcassets */,
+				333035121FDBBBAE001B47D7 /* LaunchScreen.storyboard */,
+			);
+			path = KtvBusiness;
+			sourceTree = "<group>";
+		};
+		3330351F1FDBBBAE001B47D7 /* KtvBusinessTests */ = {
+			isa = PBXGroup;
+			children = (
+				333035201FDBBBAE001B47D7 /* KtvBusinessTests.m */,
+				333035221FDBBBAE001B47D7 /* Info.plist */,
+			);
+			path = KtvBusinessTests;
+			sourceTree = "<group>";
+		};
+		3330352A1FDBBBAE001B47D7 /* KtvBusinessUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3330352B1FDBBBAE001B47D7 /* KtvBusinessUITests.m */,
+				3330352D1FDBBBAE001B47D7 /* Info.plist */,
+			);
+			path = KtvBusinessUITests;
+			sourceTree = "<group>";
+		};
+		3330353B1FDBC77D001B47D7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3330353C1FDBC77D001B47D7 /* StoryBoards */,
+				3330353D1FDBC77D001B47D7 /* File */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		3330353C1FDBC77D001B47D7 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				333035881FDBCF6B001B47D7 /* Home.storyboard */,
+				3330358A1FDBCFB5001B47D7 /* Hall.storyboard */,
+				3330358C1FDBCFE1001B47D7 /* Info.storyboard */,
+				3330358E1FDBCFF1001B47D7 /* Mine.storyboard */,
+			);
+			path = StoryBoards;
+			sourceTree = "<group>";
+		};
+		3330353D1FDBC77D001B47D7 /* File */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = File;
+			sourceTree = "<group>";
+		};
+		3330353E1FDBC77D001B47D7 /* Class */ = {
+			isa = PBXGroup;
+			children = (
+				3330354F1FDBC980001B47D7 /* Category */,
+				333035511FDBC980001B47D7 /* Common */,
+				333035541FDBC981001B47D7 /* Network */,
+				333035551FDBC981001B47D7 /* Scenes */,
+				333035521FDBC980001B47D7 /* ThirdParty */,
+				333035501FDBC980001B47D7 /* ThirdPartyManager */,
+				333035531FDBC980001B47D7 /* Tool */,
+			);
+			path = Class;
+			sourceTree = "<group>";
+		};
+		3330353F1FDBC77D001B47D7 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				333035451FDBC7F7001B47D7 /* AppDelegate.h */,
+				333035461FDBC7F7001B47D7 /* AppDelegate.m */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		333035401FDBC7C7001B47D7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				333035481FDBC809001B47D7 /* Info.plist */,
+				333035491FDBC809001B47D7 /* main.m */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3330354F1FDBC980001B47D7 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				333035681FDBCA39001B47D7 /* MBProgressHUD+KTV.h */,
+				333035601FDBCA38001B47D7 /* MBProgressHUD+KTV.m */,
+				333035691FDBCA39001B47D7 /* NSDate+Processing.h */,
+				3330356F1FDBCA39001B47D7 /* NSDate+Processing.m */,
+				3330356B1FDBCA39001B47D7 /* UIButton+KTVExtension.h */,
+				3330356D1FDBCA39001B47D7 /* UIButton+KTVExtension.m */,
+				333035721FDBCA39001B47D7 /* UIColor+KTVExtension.h */,
+				333035711FDBCA39001B47D7 /* UIColor+KTVExtension.m */,
+				3330356C1FDBCA39001B47D7 /* UIColor+KTVSkin.h */,
+				333035741FDBCA3A001B47D7 /* UIColor+KTVSkin.m */,
+				333035701FDBCA39001B47D7 /* UIFont+Ktv.h */,
+				333035771FDBCA3A001B47D7 /* UIFont+Ktv.m */,
+				333035611FDBCA38001B47D7 /* UIImage+extension.h */,
+				333035621FDBCA38001B47D7 /* UIImage+extension.m */,
+				333035731FDBCA3A001B47D7 /* UIImageView+extension.h */,
+				3330356E1FDBCA39001B47D7 /* UIImageView+extension.m */,
+				333035751FDBCA3A001B47D7 /* UILabel+Ktv.h */,
+				333035761FDBCA3A001B47D7 /* UILabel+Ktv.m */,
+				333035651FDBCA39001B47D7 /* UINavigationBar+background.h */,
+				333035661FDBCA39001B47D7 /* UINavigationBar+background.m */,
+				3330356A1FDBCA39001B47D7 /* UIView+extension.h */,
+				333035671FDBCA39001B47D7 /* UIView+extension.m */,
+				333035631FDBCA39001B47D7 /* UIViewController+StoryboardHelper.h */,
+				333035641FDBCA39001B47D7 /* UIViewController+StoryboardHelper.m */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		333035501FDBC980001B47D7 /* ThirdPartyManager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ThirdPartyManager;
+			sourceTree = "<group>";
+		};
+		333035511FDBC980001B47D7 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				333035841FDBCADD001B47D7 /* KTVCommonDefine.h */,
+				333035851FDBCB02001B47D7 /* KTVImportHeader.h */,
+				333035871FDBCB7C001B47D7 /* KTVPrefixHeader.pch */,
+				333035D61FDBE84D001B47D7 /* KTVToastDefine.h */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		333035521FDBC980001B47D7 /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ThirdParty;
+			sourceTree = "<group>";
+		};
+		333035531FDBC980001B47D7 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				333035B91FDBE6D9001B47D7 /* KTVAlertController.h */,
+				333035B41FDBE6D9001B47D7 /* KTVAlertController.m */,
+				333035B51FDBE6D9001B47D7 /* KTVCommon.h */,
+				333035BB1FDBE6DA001B47D7 /* KTVCommon.m */,
+				333035B61FDBE6D9001B47D7 /* KTVToast.h */,
+				333035B71FDBE6D9001B47D7 /* KTVToast.m */,
+				333035BA1FDBE6DA001B47D7 /* KTVUtil.h */,
+				333035B81FDBE6D9001B47D7 /* KTVUtil.m */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		333035541FDBC981001B47D7 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		333035551FDBC981001B47D7 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				333035CC1FDBE7FD001B47D7 /* Network */,
+				333035C01FDBE760001B47D7 /* App */,
+				333035561FDBC981001B47D7 /* Base */,
+				333035901FDBD890001B47D7 /* Home */,
+				333035961FDBD890001B47D7 /* Hall */,
+				333035A21FDBD890001B47D7 /* Info */,
+				3330359C1FDBD890001B47D7 /* Mine */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		333035561FDBC981001B47D7 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				333035581FDBC9BE001B47D7 /* KTVBaseTabBarViewController.h */,
+				333035571FDBC9BE001B47D7 /* KTVBaseTabBarViewController.m */,
+				3330355A1FDBC9EE001B47D7 /* KTVBaseNavigationViewController.h */,
+				3330355B1FDBC9EF001B47D7 /* KTVBaseNavigationViewController.m */,
+				3330355E1FDBC9F7001B47D7 /* KTVBaseViewController.h */,
+				3330355D1FDBC9F6001B47D7 /* KTVBaseViewController.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		333035901FDBD890001B47D7 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				333035921FDBD890001B47D7 /* Controller */,
+				333035931FDBD890001B47D7 /* Model */,
+				333035941FDBD890001B47D7 /* View */,
+				333035951FDBD890001B47D7 /* Service */,
+				333035911FDBD890001B47D7 /* Logic */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		333035911FDBD890001B47D7 /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Logic;
+			sourceTree = "<group>";
+		};
+		333035921FDBD890001B47D7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				333035A81FDBD8DB001B47D7 /* KTVHomeController.h */,
+				333035A91FDBD8DB001B47D7 /* KTVHomeController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		333035931FDBD890001B47D7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		333035941FDBD890001B47D7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		333035951FDBD890001B47D7 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		333035961FDBD890001B47D7 /* Hall */ = {
+			isa = PBXGroup;
+			children = (
+				333035971FDBD890001B47D7 /* Logic */,
+				333035981FDBD890001B47D7 /* Controller */,
+				333035991FDBD890001B47D7 /* Model */,
+				3330359A1FDBD890001B47D7 /* View */,
+				3330359B1FDBD890001B47D7 /* Service */,
+			);
+			path = Hall;
+			sourceTree = "<group>";
+		};
+		333035971FDBD890001B47D7 /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Logic;
+			sourceTree = "<group>";
+		};
+		333035981FDBD890001B47D7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				333035AB1FDBD8F4001B47D7 /* KTVHallController.h */,
+				333035AC1FDBD8F4001B47D7 /* KTVHallController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		333035991FDBD890001B47D7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3330359A1FDBD890001B47D7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3330359B1FDBD890001B47D7 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		3330359C1FDBD890001B47D7 /* Mine */ = {
+			isa = PBXGroup;
+			children = (
+				3330359D1FDBD890001B47D7 /* Logic */,
+				3330359E1FDBD890001B47D7 /* Controller */,
+				3330359F1FDBD890001B47D7 /* Model */,
+				333035A01FDBD890001B47D7 /* View */,
+				333035A11FDBD890001B47D7 /* Service */,
+			);
+			path = Mine;
+			sourceTree = "<group>";
+		};
+		3330359D1FDBD890001B47D7 /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Logic;
+			sourceTree = "<group>";
+		};
+		3330359E1FDBD890001B47D7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				333035B11FDBD91B001B47D7 /* KTVMineController.h */,
+				333035B21FDBD91B001B47D7 /* KTVMineController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3330359F1FDBD890001B47D7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		333035A01FDBD890001B47D7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		333035A11FDBD890001B47D7 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		333035A21FDBD890001B47D7 /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				333035A31FDBD890001B47D7 /* Logic */,
+				333035A41FDBD890001B47D7 /* Controller */,
+				333035A51FDBD890001B47D7 /* Model */,
+				333035A61FDBD890001B47D7 /* View */,
+				333035A71FDBD890001B47D7 /* Service */,
+			);
+			path = Info;
+			sourceTree = "<group>";
+		};
+		333035A31FDBD890001B47D7 /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Logic;
+			sourceTree = "<group>";
+		};
+		333035A41FDBD890001B47D7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				333035AE1FDBD90C001B47D7 /* KTVInfoController.h */,
+				333035AF1FDBD90C001B47D7 /* KTVInfoController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		333035A51FDBD890001B47D7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		333035A61FDBD890001B47D7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		333035A71FDBD890001B47D7 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		333035C01FDBE760001B47D7 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				333035C11FDBE760001B47D7 /* Logic */,
+				333035C21FDBE760001B47D7 /* Controller */,
+				333035C31FDBE760001B47D7 /* Model */,
+				333035C41FDBE760001B47D7 /* View */,
+				333035C51FDBE760001B47D7 /* Service */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		333035C11FDBE760001B47D7 /* Logic */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Logic;
+			sourceTree = "<group>";
+		};
+		333035C21FDBE760001B47D7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		333035C31FDBE760001B47D7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				333035C61FDBE777001B47D7 /* KTVUser.h */,
+				333035C71FDBE777001B47D7 /* KTVUser.m */,
+				333035C91FDBE796001B47D7 /* KTVAddress.h */,
+				333035CA1FDBE796001B47D7 /* KTVAddress.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		333035C41FDBE760001B47D7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		333035C51FDBE760001B47D7 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		333035CC1FDBE7FD001B47D7 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				333035CD1FDBE7FE001B47D7 /* KTVNetworkHelper.m */,
+				333035CE1FDBE7FE001B47D7 /* KTVRequestMessage.m */,
+				333035CF1FDBE7FE001B47D7 /* KTVUrl.h */,
+				333035D01FDBE7FE001B47D7 /* KTVNetworkHelper.h */,
+				333035D11FDBE7FE001B47D7 /* KTVUrl.m */,
+				333035D21FDBE7FE001B47D7 /* KTVRequestMessage.h */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		8E2EE5CA3CD691D91EA9E5A7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8DB56BC54F00028E85D26D59 /* Pods-KtvBusiness.debug.xcconfig */,
+				DCAB3D469F83DB0C9413AC02 /* Pods-KtvBusiness.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FE41F39B4B29D284D3DF6C95 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				02515D6F93BCC4CD75667549 /* libPods-KtvBusiness.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		333035031FDBBBAE001B47D7 /* KtvBusiness */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 333035301FDBBBAE001B47D7 /* Build configuration list for PBXNativeTarget "KtvBusiness" */;
+			buildPhases = (
+				1E981C850906F97B9A7B36C3 /* [CP] Check Pods Manifest.lock */,
+				333035001FDBBBAE001B47D7 /* Sources */,
+				333035011FDBBBAE001B47D7 /* Frameworks */,
+				333035021FDBBBAE001B47D7 /* Resources */,
+				8EC87823FF3EE503605E47F8 /* [CP] Embed Pods Frameworks */,
+				C16BEF247109D3651752CE60 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KtvBusiness;
+			productName = KtvBusiness;
+			productReference = 333035041FDBBBAE001B47D7 /* KtvBusiness.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3330351B1FDBBBAE001B47D7 /* KtvBusinessTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 333035331FDBBBAE001B47D7 /* Build configuration list for PBXNativeTarget "KtvBusinessTests" */;
+			buildPhases = (
+				333035181FDBBBAE001B47D7 /* Sources */,
+				333035191FDBBBAE001B47D7 /* Frameworks */,
+				3330351A1FDBBBAE001B47D7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3330351E1FDBBBAE001B47D7 /* PBXTargetDependency */,
+			);
+			name = KtvBusinessTests;
+			productName = KtvBusinessTests;
+			productReference = 3330351C1FDBBBAE001B47D7 /* KtvBusinessTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		333035261FDBBBAE001B47D7 /* KtvBusinessUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 333035361FDBBBAE001B47D7 /* Build configuration list for PBXNativeTarget "KtvBusinessUITests" */;
+			buildPhases = (
+				333035231FDBBBAE001B47D7 /* Sources */,
+				333035241FDBBBAE001B47D7 /* Frameworks */,
+				333035251FDBBBAE001B47D7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				333035291FDBBBAE001B47D7 /* PBXTargetDependency */,
+			);
+			name = KtvBusinessUITests;
+			productName = KtvBusinessUITests;
+			productReference = 333035271FDBBBAE001B47D7 /* KtvBusinessUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		333034FC1FDBBBAE001B47D7 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = ktv;
+				TargetAttributes = {
+					333035031FDBBBAE001B47D7 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					3330351B1FDBBBAE001B47D7 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 333035031FDBBBAE001B47D7;
+					};
+					333035261FDBBBAE001B47D7 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 333035031FDBBBAE001B47D7;
+					};
+				};
+			};
+			buildConfigurationList = 333034FF1FDBBBAE001B47D7 /* Build configuration list for PBXProject "KtvBusiness" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 333034FB1FDBBBAE001B47D7;
+			productRefGroup = 333035051FDBBBAE001B47D7 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				333035031FDBBBAE001B47D7 /* KtvBusiness */,
+				3330351B1FDBBBAE001B47D7 /* KtvBusinessTests */,
+				333035261FDBBBAE001B47D7 /* KtvBusinessUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		333035021FDBBBAE001B47D7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				333035141FDBBBAE001B47D7 /* LaunchScreen.storyboard in Resources */,
+				3330358D1FDBCFE1001B47D7 /* Info.storyboard in Resources */,
+				333035891FDBCF6B001B47D7 /* Home.storyboard in Resources */,
+				333035111FDBBBAE001B47D7 /* Assets.xcassets in Resources */,
+				3330354A1FDBC809001B47D7 /* Info.plist in Resources */,
+				3330350F1FDBBBAE001B47D7 /* Main.storyboard in Resources */,
+				3330358B1FDBCFB5001B47D7 /* Hall.storyboard in Resources */,
+				3330358F1FDBCFF1001B47D7 /* Mine.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3330351A1FDBBBAE001B47D7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		333035251FDBBBAE001B47D7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1E981C850906F97B9A7B36C3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8EC87823FF3EE503605E47F8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KtvBusiness/Pods-KtvBusiness-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C16BEF247109D3651752CE60 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-KtvBusiness/Pods-KtvBusiness-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		333035001FDBBBAE001B47D7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				333035831FDBCA3A001B47D7 /* UIFont+Ktv.m in Sources */,
+				3330355C1FDBC9EF001B47D7 /* KTVBaseNavigationViewController.m in Sources */,
+				3330357D1FDBCA3A001B47D7 /* UIButton+KTVExtension.m in Sources */,
+				333035BD1FDBE6DA001B47D7 /* KTVToast.m in Sources */,
+				333035B01FDBD90C001B47D7 /* KTVInfoController.m in Sources */,
+				3330357E1FDBCA3A001B47D7 /* UIImageView+extension.m in Sources */,
+				3330357A1FDBCA3A001B47D7 /* UIViewController+StoryboardHelper.m in Sources */,
+				333035AD1FDBD8F4001B47D7 /* KTVHallController.m in Sources */,
+				333035821FDBCA3A001B47D7 /* UILabel+Ktv.m in Sources */,
+				333035BC1FDBE6DA001B47D7 /* KTVAlertController.m in Sources */,
+				333035471FDBC7F7001B47D7 /* AppDelegate.m in Sources */,
+				3330355F1FDBC9F7001B47D7 /* KTVBaseViewController.m in Sources */,
+				333035D31FDBE7FE001B47D7 /* KTVNetworkHelper.m in Sources */,
+				3330357F1FDBCA3A001B47D7 /* NSDate+Processing.m in Sources */,
+				333035CB1FDBE796001B47D7 /* KTVAddress.m in Sources */,
+				333035781FDBCA3A001B47D7 /* MBProgressHUD+KTV.m in Sources */,
+				3330357C1FDBCA3A001B47D7 /* UIView+extension.m in Sources */,
+				333035BE1FDBE6DA001B47D7 /* KTVUtil.m in Sources */,
+				3330354B1FDBC809001B47D7 /* main.m in Sources */,
+				333035B31FDBD91B001B47D7 /* KTVMineController.m in Sources */,
+				333035801FDBCA3A001B47D7 /* UIColor+KTVExtension.m in Sources */,
+				333035591FDBC9BE001B47D7 /* KTVBaseTabBarViewController.m in Sources */,
+				333035AA1FDBD8DB001B47D7 /* KTVHomeController.m in Sources */,
+				333035D41FDBE7FE001B47D7 /* KTVRequestMessage.m in Sources */,
+				333035791FDBCA3A001B47D7 /* UIImage+extension.m in Sources */,
+				333035C81FDBE777001B47D7 /* KTVUser.m in Sources */,
+				333035BF1FDBE6DA001B47D7 /* KTVCommon.m in Sources */,
+				333035811FDBCA3A001B47D7 /* UIColor+KTVSkin.m in Sources */,
+				3330357B1FDBCA3A001B47D7 /* UINavigationBar+background.m in Sources */,
+				333035D51FDBE7FE001B47D7 /* KTVUrl.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		333035181FDBBBAE001B47D7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				333035211FDBBBAE001B47D7 /* KtvBusinessTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		333035231FDBBBAE001B47D7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3330352C1FDBBBAE001B47D7 /* KtvBusinessUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3330351E1FDBBBAE001B47D7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 333035031FDBBBAE001B47D7 /* KtvBusiness */;
+			targetProxy = 3330351D1FDBBBAE001B47D7 /* PBXContainerItemProxy */;
+		};
+		333035291FDBBBAE001B47D7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 333035031FDBBBAE001B47D7 /* KtvBusiness */;
+			targetProxy = 333035281FDBBBAE001B47D7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3330350D1FDBBBAE001B47D7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3330350E1FDBBBAE001B47D7 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		333035121FDBBBAE001B47D7 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				333035131FDBBBAE001B47D7 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3330352E1FDBBBAE001B47D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3330352F1FDBBBAE001B47D7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		333035311FDBBBAE001B47D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8DB56BC54F00028E85D26D59 /* Pods-KtvBusiness.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HFH9E69Y5K;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/KtvBusiness/Class/Common/KTVPrefixHeader.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/KtvBusiness/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ktv.business.KtvBusiness;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		333035321FDBBBAE001B47D7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DCAB3D469F83DB0C9413AC02 /* Pods-KtvBusiness.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HFH9E69Y5K;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/KtvBusiness/Class/Common/KTVPrefixHeader.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/KtvBusiness/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ktv.business.KtvBusiness;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		333035341FDBBBAE001B47D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HFH9E69Y5K;
+				INFOPLIST_FILE = KtvBusinessTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ktv.business.KtvBusinessTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KtvBusiness.app/KtvBusiness";
+			};
+			name = Debug;
+		};
+		333035351FDBBBAE001B47D7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HFH9E69Y5K;
+				INFOPLIST_FILE = KtvBusinessTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ktv.business.KtvBusinessTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KtvBusiness.app/KtvBusiness";
+			};
+			name = Release;
+		};
+		333035371FDBBBAE001B47D7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HFH9E69Y5K;
+				INFOPLIST_FILE = KtvBusinessUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ktv.business.KtvBusinessUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = KtvBusiness;
+			};
+			name = Debug;
+		};
+		333035381FDBBBAE001B47D7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HFH9E69Y5K;
+				INFOPLIST_FILE = KtvBusinessUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ktv.business.KtvBusinessUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = KtvBusiness;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		333034FF1FDBBBAE001B47D7 /* Build configuration list for PBXProject "KtvBusiness" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3330352E1FDBBBAE001B47D7 /* Debug */,
+				3330352F1FDBBBAE001B47D7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		333035301FDBBBAE001B47D7 /* Build configuration list for PBXNativeTarget "KtvBusiness" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				333035311FDBBBAE001B47D7 /* Debug */,
+				333035321FDBBBAE001B47D7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		333035331FDBBBAE001B47D7 /* Build configuration list for PBXNativeTarget "KtvBusinessTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				333035341FDBBBAE001B47D7 /* Debug */,
+				333035351FDBBBAE001B47D7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		333035361FDBBBAE001B47D7 /* Build configuration list for PBXNativeTarget "KtvBusinessUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				333035371FDBBBAE001B47D7 /* Debug */,
+				333035381FDBBBAE001B47D7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 333034FC1FDBBBAE001B47D7 /* Project object */;
+}
