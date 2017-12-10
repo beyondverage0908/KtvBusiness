@@ -16,8 +16,16 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    self.title = @"首页";
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self hideNavigationBar:YES];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self hideNavigationBar:NO];
 }
 
 - (void)didReceiveMemoryWarning {
