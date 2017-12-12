@@ -47,6 +47,9 @@
 		333035D31FDBE7FE001B47D7 /* KTVNetworkHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 333035CD1FDBE7FE001B47D7 /* KTVNetworkHelper.m */; };
 		333035D41FDBE7FE001B47D7 /* KTVRequestMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 333035CE1FDBE7FE001B47D7 /* KTVRequestMessage.m */; };
 		333035D51FDBE7FE001B47D7 /* KTVUrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 333035D11FDBE7FE001B47D7 /* KTVUrl.m */; };
+		33389C091FDD2B1E0091BA7C /* KTVPublishActivityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33389C081FDD2B1E0091BA7C /* KTVPublishActivityCell.m */; };
+		33389C0C1FDD2B400091BA7C /* KTVOrderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33389C0B1FDD2B400091BA7C /* KTVOrderCell.m */; };
+		33389C0F1FDD309C0091BA7C /* KTVTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33389C0E1FDD309C0091BA7C /* KTVTableHeaderView.m */; };
 		D0BF6BD695C10CBF62CFFEBD /* libPods-KtvBusiness.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 02515D6F93BCC4CD75667549 /* libPods-KtvBusiness.a */; };
 /* End PBXBuildFile section */
 
@@ -147,6 +150,12 @@
 		333035D11FDBE7FE001B47D7 /* KTVUrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTVUrl.m; sourceTree = "<group>"; };
 		333035D21FDBE7FE001B47D7 /* KTVRequestMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTVRequestMessage.h; sourceTree = "<group>"; };
 		333035D61FDBE84D001B47D7 /* KTVToastDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTVToastDefine.h; sourceTree = "<group>"; };
+		33389C071FDD2B1E0091BA7C /* KTVPublishActivityCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTVPublishActivityCell.h; sourceTree = "<group>"; };
+		33389C081FDD2B1E0091BA7C /* KTVPublishActivityCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTVPublishActivityCell.m; sourceTree = "<group>"; };
+		33389C0A1FDD2B400091BA7C /* KTVOrderCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTVOrderCell.h; sourceTree = "<group>"; };
+		33389C0B1FDD2B400091BA7C /* KTVOrderCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTVOrderCell.m; sourceTree = "<group>"; };
+		33389C0D1FDD309C0091BA7C /* KTVTableHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTVTableHeaderView.h; sourceTree = "<group>"; };
+		33389C0E1FDD309C0091BA7C /* KTVTableHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTVTableHeaderView.m; sourceTree = "<group>"; };
 		8DB56BC54F00028E85D26D59 /* Pods-KtvBusiness.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KtvBusiness.debug.xcconfig"; path = "Pods/Target Support Files/Pods-KtvBusiness/Pods-KtvBusiness.debug.xcconfig"; sourceTree = "<group>"; };
 		DCAB3D469F83DB0C9413AC02 /* Pods-KtvBusiness.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KtvBusiness.release.xcconfig"; path = "Pods/Target Support Files/Pods-KtvBusiness/Pods-KtvBusiness.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -433,6 +442,10 @@
 		333035941FDBD890001B47D7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				33389C071FDD2B1E0091BA7C /* KTVPublishActivityCell.h */,
+				33389C081FDD2B1E0091BA7C /* KTVPublishActivityCell.m */,
+				33389C0A1FDD2B400091BA7C /* KTVOrderCell.h */,
+				33389C0B1FDD2B400091BA7C /* KTVOrderCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -631,6 +644,8 @@
 		333035C41FDBE760001B47D7 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				33389C0D1FDD309C0091BA7C /* KTVTableHeaderView.h */,
+				33389C0E1FDD309C0091BA7C /* KTVTableHeaderView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -876,6 +891,7 @@
 				333035D31FDBE7FE001B47D7 /* KTVNetworkHelper.m in Sources */,
 				3330357F1FDBCA3A001B47D7 /* NSDate+Processing.m in Sources */,
 				333035CB1FDBE796001B47D7 /* KTVAddress.m in Sources */,
+				33389C0F1FDD309C0091BA7C /* KTVTableHeaderView.m in Sources */,
 				333035781FDBCA3A001B47D7 /* MBProgressHUD+KTV.m in Sources */,
 				3330357C1FDBCA3A001B47D7 /* UIView+extension.m in Sources */,
 				333035BE1FDBE6DA001B47D7 /* KTVUtil.m in Sources */,
@@ -887,8 +903,10 @@
 				333035D41FDBE7FE001B47D7 /* KTVRequestMessage.m in Sources */,
 				333035791FDBCA3A001B47D7 /* UIImage+extension.m in Sources */,
 				333035C81FDBE777001B47D7 /* KTVUser.m in Sources */,
+				33389C0C1FDD2B400091BA7C /* KTVOrderCell.m in Sources */,
 				333035BF1FDBE6DA001B47D7 /* KTVCommon.m in Sources */,
 				333035811FDBCA3A001B47D7 /* UIColor+KTVSkin.m in Sources */,
+				33389C091FDD2B1E0091BA7C /* KTVPublishActivityCell.m in Sources */,
 				3330357B1FDBCA3A001B47D7 /* UINavigationBar+background.m in Sources */,
 				333035D51FDBE7FE001B47D7 /* KTVUrl.m in Sources */,
 			);
