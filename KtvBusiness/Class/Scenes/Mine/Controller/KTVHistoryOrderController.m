@@ -1,27 +1,24 @@
 //
-//  KTVHallController.m
+//  KTVHistoryOrderController.m
 //  KtvBusiness
 //
-//  Created by pingjun lin on 2017/12/9.
+//  Created by pingjun lin on 2017/12/16.
 //  Copyright © 2017年 ktv. All rights reserved.
 //
 
-#import "KTVHallController.h"
+#import "KTVHistoryOrderController.h"
 #import "KTVOrderCell.h"
 
-@interface KTVHallController ()<UITableViewDelegate, UITableViewDataSource>
+@interface KTVHistoryOrderController ()<UITableViewDelegate, UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableview;
-@property (weak, nonatomic) IBOutlet UISegmentedControl *segment;
 
 @end
 
-@implementation KTVHallController
+@implementation KTVHistoryOrderController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"接单大厅";
-    
     self.tableview.delegate = self;
     self.tableview.dataSource = self;
     self.tableview.backgroundColor = [UIColor ktvBG];
@@ -51,12 +48,5 @@
     KTVOrderCell *cell = [tableView dequeueReusableCellWithIdentifier:@"KTVOrderCell"];
     return cell;
 }
-
-#pragma mark - UISegmentController Value Change
-
-- (IBAction)segmentValueChange:(UISegmentedControl *)sender {
-    CLog(@"--->>> %@", @(sender.selectedSegmentIndex));
-}
-
 
 @end

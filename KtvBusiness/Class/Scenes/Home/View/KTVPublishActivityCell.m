@@ -20,6 +20,10 @@
 
 - (IBAction)publishBusinessActivity:(UIButton *)sender {
     CLog(@"-->> 发布商家活动");
+    
+    if (self.publishActivityCallBack) {
+        self.publishActivityCallBack();
+    }
 }
 
 

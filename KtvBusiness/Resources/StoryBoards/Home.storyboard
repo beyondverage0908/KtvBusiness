@@ -169,7 +169,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="性感小野猫" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Sw-yM-qQl">
-                                                            <rect key="frame" x="20" y="35" width="335" height="16"/>
+                                                            <rect key="frame" x="20" y="35" width="66.5" height="16"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -181,7 +181,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="暖场人:小苹果" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O7W-0Q-UgN">
-                                                            <rect key="frame" x="20" y="83" width="335" height="16"/>
+                                                            <rect key="frame" x="20" y="83" width="83.5" height="16"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -199,7 +199,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="下单时间: 2017年12月08日" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Irl-zK-i9n">
-                                                            <rect key="frame" x="20" y="133" width="335" height="16"/>
+                                                            <rect key="frame" x="20" y="133" width="160" height="16"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -246,6 +246,30 @@
                                                                 <action selector="ignoreOrderAction:" destination="xhA-C1-Vae" eventType="touchUpInside" id="wiN-cT-qZC"/>
                                                             </connections>
                                                         </button>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="暂未到店里消费" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WC8-RZ-iPm">
+                                                            <rect key="frame" x="238" y="33" width="122" height="21"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                            <color key="textColor" red="0.94901960780000005" green="0.094117647060000004" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e4n-Qf-KmL">
+                                                            <rect key="frame" x="286" y="76" width="74" height="30"/>
+                                                            <color key="backgroundColor" red="0.94901960780000005" green="0.094117647060000004" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                            <inset key="contentEdgeInsets" minX="10" minY="7" maxX="10" maxY="7"/>
+                                                            <state key="normal" title="确认消费">
+                                                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            </state>
+                                                            <connections>
+                                                                <action selector="confirmOrder:" destination="xhA-C1-Vae" eventType="touchUpInside" id="Bc2-RA-VHi"/>
+                                                            </connections>
+                                                        </button>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="使用密码: 18516133629" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SWI-kP-2lL">
+                                                            <rect key="frame" x="220.5" y="134.5" width="139.5" height="14.5"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="12"/>
+                                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                     </subviews>
                                                     <constraints>
                                                         <constraint firstAttribute="bottom" secondItem="5cr-Ki-iBq" secondAttribute="bottom" constant="10" id="1TK-3m-A4Z"/>
@@ -254,14 +278,18 @@
                                                         <constraint firstItem="O7W-0Q-UgN" firstAttribute="top" secondItem="436-Pz-Wfc" secondAttribute="bottom" constant="8" id="4xQ-Ea-OgW"/>
                                                         <constraint firstItem="436-Pz-Wfc" firstAttribute="leading" secondItem="5pJ-Pf-mqz" secondAttribute="leading" constant="20" id="5j2-ZF-5YL"/>
                                                         <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="dez-0S-jqI" secondAttribute="bottom" constant="5" id="8h3-sx-MYQ"/>
+                                                        <constraint firstAttribute="trailing" secondItem="e4n-Qf-KmL" secondAttribute="trailing" constant="15" id="90z-hS-lxK"/>
                                                         <constraint firstItem="bYV-Is-dcv" firstAttribute="top" secondItem="5pJ-Pf-mqz" secondAttribute="top" constant="10" id="9MF-fN-PXm"/>
+                                                        <constraint firstItem="SWI-kP-2lL" firstAttribute="centerY" secondItem="Irl-zK-i9n" secondAttribute="centerY" id="9QP-7F-gIt"/>
                                                         <constraint firstItem="5Sw-yM-qQl" firstAttribute="top" secondItem="bYV-Is-dcv" secondAttribute="bottom" constant="8" id="Hhu-xI-Dad"/>
-                                                        <constraint firstAttribute="trailing" secondItem="Irl-zK-i9n" secondAttribute="trailing" constant="20" id="JdS-wP-VdV"/>
+                                                        <constraint firstItem="e4n-Qf-KmL" firstAttribute="centerY" secondItem="O7W-0Q-UgN" secondAttribute="centerY" id="IcQ-9a-zfQ"/>
                                                         <constraint firstItem="IB7-Kn-rUT" firstAttribute="top" secondItem="O7W-0Q-UgN" secondAttribute="bottom" constant="10" id="Jeb-4X-smB"/>
                                                         <constraint firstAttribute="trailing" secondItem="U9U-Ob-2zo" secondAttribute="trailing" id="KUW-gB-78f"/>
+                                                        <constraint firstAttribute="trailing" secondItem="WC8-RZ-iPm" secondAttribute="trailing" constant="15" id="N1U-va-ENa"/>
                                                         <constraint firstItem="Irl-zK-i9n" firstAttribute="top" secondItem="IB7-Kn-rUT" secondAttribute="bottom" constant="8" id="PUe-0L-k7W"/>
                                                         <constraint firstItem="vB5-Vx-yQb" firstAttribute="centerY" secondItem="IB7-Kn-rUT" secondAttribute="centerY" id="RFr-Gs-f5b"/>
                                                         <constraint firstItem="436-Pz-Wfc" firstAttribute="top" secondItem="5Sw-yM-qQl" secondAttribute="bottom" constant="8" id="Sdl-mz-wV2"/>
+                                                        <constraint firstItem="WC8-RZ-iPm" firstAttribute="centerY" secondItem="5Sw-yM-qQl" secondAttribute="centerY" id="VDI-jA-HXH"/>
                                                         <constraint firstItem="tUE-BA-NiG" firstAttribute="leading" secondItem="5pJ-Pf-mqz" secondAttribute="leading" constant="20" id="W9e-Zp-g4O"/>
                                                         <constraint firstItem="U9U-Ob-2zo" firstAttribute="leading" secondItem="5pJ-Pf-mqz" secondAttribute="leading" id="XMH-lA-dP5"/>
                                                         <constraint firstAttribute="trailing" secondItem="436-Pz-Wfc" secondAttribute="trailing" constant="20" id="XTy-xq-3SQ"/>
@@ -273,13 +301,15 @@
                                                         <constraint firstItem="dez-0S-jqI" firstAttribute="top" secondItem="tUE-BA-NiG" secondAttribute="bottom" constant="10" id="gW9-QE-EZO"/>
                                                         <constraint firstItem="5cr-Ki-iBq" firstAttribute="leading" secondItem="62r-Kb-dEM" secondAttribute="trailing" constant="20" id="ghT-bS-dob"/>
                                                         <constraint firstItem="5Sw-yM-qQl" firstAttribute="leading" secondItem="5pJ-Pf-mqz" secondAttribute="leading" constant="20" id="hAt-gl-YYx"/>
+                                                        <constraint firstItem="e4n-Qf-KmL" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="O7W-0Q-UgN" secondAttribute="trailing" constant="15" id="jvL-gd-vQk"/>
                                                         <constraint firstItem="IB7-Kn-rUT" firstAttribute="leading" secondItem="5pJ-Pf-mqz" secondAttribute="leading" constant="20" id="kK6-UM-Ffg"/>
                                                         <constraint firstItem="Irl-zK-i9n" firstAttribute="leading" secondItem="5pJ-Pf-mqz" secondAttribute="leading" constant="20" id="mC9-lS-ZWf"/>
                                                         <constraint firstItem="tUE-BA-NiG" firstAttribute="top" secondItem="Irl-zK-i9n" secondAttribute="bottom" constant="10" id="nCM-7M-deg"/>
-                                                        <constraint firstAttribute="trailing" secondItem="5Sw-yM-qQl" secondAttribute="trailing" constant="20" id="nF9-gE-AtK"/>
+                                                        <constraint firstAttribute="trailing" secondItem="SWI-kP-2lL" secondAttribute="trailing" constant="15" id="prh-ge-H7z"/>
+                                                        <constraint firstItem="WC8-RZ-iPm" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="5Sw-yM-qQl" secondAttribute="trailing" constant="10" id="qeZ-v7-kfI"/>
+                                                        <constraint firstItem="SWI-kP-2lL" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Irl-zK-i9n" secondAttribute="trailing" constant="15" id="rne-Fh-2aq"/>
                                                         <constraint firstAttribute="trailing" secondItem="tUE-BA-NiG" secondAttribute="trailing" constant="20" id="rtu-yk-0Kv"/>
                                                         <constraint firstAttribute="bottom" secondItem="U9U-Ob-2zo" secondAttribute="bottom" id="tn2-9P-9UA"/>
-                                                        <constraint firstAttribute="trailing" secondItem="O7W-0Q-UgN" secondAttribute="trailing" constant="20" id="yiW-sq-mnh"/>
                                                         <constraint firstItem="vB5-Vx-yQb" firstAttribute="leading" secondItem="IB7-Kn-rUT" secondAttribute="trailing" constant="10" id="zer-VU-bW2"/>
                                                         <constraint firstItem="62r-Kb-dEM" firstAttribute="centerY" secondItem="5cr-Ki-iBq" secondAttribute="centerY" id="zmC-Ar-Y6E"/>
                                                     </constraints>
@@ -290,8 +320,10 @@
                                                     <outlet property="moneyLabel" destination="vB5-Vx-yQb" id="By6-zK-M74"/>
                                                     <outlet property="nicknameLabel" destination="5Sw-yM-qQl" id="5BX-vr-UNb"/>
                                                     <outlet property="orderNoLabel" destination="bYV-Is-dcv" id="wGv-CY-FfT"/>
+                                                    <outlet property="orderStatusLabel" destination="WC8-RZ-iPm" id="2R9-0a-b7o"/>
                                                     <outlet property="orderTimeLable" destination="Irl-zK-i9n" id="DDa-O0-peV"/>
                                                     <outlet property="phoneLabel" destination="dez-0S-jqI" id="DTV-ka-VUp"/>
+                                                    <outlet property="usePasswordLabel" destination="SWI-kP-2lL" id="kVj-8J-EPS"/>
                                                     <outlet property="useTimeLabel" destination="tUE-BA-NiG" id="VWz-6Q-vGe"/>
                                                 </connections>
                                             </tableViewCell>

@@ -10,6 +10,7 @@
 #import "KTVPublishActivityCell.h"
 #import "KTVOrderCell.h"
 #import "KTVTableHeaderView.h"
+#import "KTVPublishActivityController.h"
 
 @interface KTVHomeController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -97,13 +98,20 @@
     return 0;
 }
 
-#pragma mark - UITableViewDelegate, UITableViewDataSource
+#pragma mark - UITableViewDataSource
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
         return [UITableViewCell new];
     } else if (indexPath.section == 1) {
+        weakify(self)
         KTVPublishActivityCell *cell = [tableView dequeueReusableCellWithIdentifier:@"KTVPublishActivityCell"];
+        cell.publishActivityCallBack = ^{
+            strongify(self);
+            KTVPublishActivityController *vc = [[KTVPublishActivityController alloc] init];
+            vc.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:vc animated:YES];
+        };
         return cell;
     } else if (indexPath.section == 2) {
         KTVOrderCell *cell = [tableView dequeueReusableCellWithIdentifier:@"KTVOrderCell"];

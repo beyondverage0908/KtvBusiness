@@ -10,4 +10,6 @@
 
 @interface KTVPublishActivityCell : UITableViewCell
 
+@property (nonatomic, copy) void (^publishActivityCallBack)(void);
+
 @end

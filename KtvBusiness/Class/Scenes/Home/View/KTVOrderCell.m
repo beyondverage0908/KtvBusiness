@@ -18,7 +18,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *orderTimeLable;
 @property (weak, nonatomic) IBOutlet UILabel *useTimeLabel;
 @property (weak, nonatomic) IBOutlet UILabel *phoneLabel;
-
+@property (weak, nonatomic) IBOutlet UILabel *orderStatusLabel; // 是否到店消费，订单结束等
+@property (weak, nonatomic) IBOutlet UILabel *usePasswordLabel; // 使用密码
 
 @end
 
@@ -40,6 +41,9 @@
     CLog(@"-->> 忽略订单");
 }
 
+- (IBAction)confirmOrder:(UIButton *)sender {
+    CLog(@"-->> 确认消费");
+}
 
 
 @end

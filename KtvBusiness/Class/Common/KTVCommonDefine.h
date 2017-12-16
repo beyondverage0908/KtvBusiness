@@ -16,8 +16,13 @@
 # define CLog(...);
 #endif
 
-// weakSelf
-#define WeakObj(o) autoreleasepool{} __weak typeof(o) weak##o = o
+// weak self
+#define weakify(var) __weak typeof(var) weak##var = var;
+#define strongify(var) \
+_Pragma("clang diagnostic push") \
+_Pragma("clang diagnostic ignored \"-Wshadow\"") \
+__strong typeof(var) var = weak##var; \
+_Pragma("clang diagnostic pop")
 
 #define iOS7 ([[UIDevice currentDevice].systemVersion doubleValue] >= 7.0)
 #define iOS8 ([[UIDevice currentDevice].systemVersion doubleValue] >= 8.0)
