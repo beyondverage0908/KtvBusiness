@@ -11,7 +11,7 @@
 #import "KTVMineOptionCell.h"
 #import "KTVAboutAppController.h"
 #import "KTVHistoryOrderController.h"
-#import "KTVMyWalletController.h"
+#import "KTVSettingController.h"
 
 @interface KTVMineController ()<UITableViewDelegate, UITableViewDataSource>
 {
@@ -39,7 +39,7 @@
 }
 
 - (void)initData {
-    _cellTitleList = [NSMutableArray arrayWithObjects:@"我的钱包", @"上传照片", @"历史订单", @"关于", nil];
+    _cellTitleList = [NSMutableArray arrayWithObjects:@"历史订单",@"设置", @"关于", nil];
 }
 
 #pragma mark - UITableViewDelegate
@@ -52,7 +52,7 @@
     if (section == 0) {
         return 1;
     } else if (section == 1) {
-        return 4;
+        return 3;
     }
     return 0;
 }
@@ -69,12 +69,12 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 1) {
         if (indexPath.row == 0) {
-            KTVMyWalletController *vc = (KTVMyWalletController *)[UIViewController storyboardName:@"Mine" storyboardId:@"KTVMyWalletController"];
-            [self.navigationController pushViewController:vc animated:YES];
-        } else if (indexPath.row == 2) {
             KTVHistoryOrderController *vc = (KTVHistoryOrderController *)[UIViewController storyboardName:@"Mine" storyboardId:@"KTVHistoryOrderController"];
             [self.navigationController pushViewController:vc animated:YES];
-        } else if (indexPath.row == 3) {
+        } else if (indexPath.row == 1) {
+            KTVSettingController *vc = [UIViewController storyboardName:@"Mine" storyboardId:@"KTVSettingController"];
+            [self.navigationController pushViewController:vc animated:YES];
+        } else if (indexPath.row == 2) {
             KTVAboutAppController *vc = (KTVAboutAppController *)[UIViewController storyboardName:@"Mine" storyboardId:@"KTVAboutAppController"];
             [self.navigationController pushViewController:vc animated:YES];
         }

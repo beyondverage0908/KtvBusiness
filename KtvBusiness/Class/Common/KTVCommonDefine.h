@@ -24,6 +24,12 @@ _Pragma("clang diagnostic ignored \"-Wshadow\"") \
 __strong typeof(var) var = weak##var; \
 _Pragma("clang diagnostic pop")
 
+// 判断字符串是否nil
+#define safetyString(var) (var = var ? var : @"");
+#define safetyNumber(var) (var = var ? var : []);
+#define safetyArray(var) (var = var ? var : [NSMutableArray array]);
+#define safetyDictionary(var) (var = var ? var : [NSMutableDictionary dictionary]);
+
 #define iOS7 ([[UIDevice currentDevice].systemVersion doubleValue] >= 7.0)
 #define iOS8 ([[UIDevice currentDevice].systemVersion doubleValue] >= 8.0)
 #define iOS9 ([[UIDevice currentDevice].systemVersion doubleValue] >= 9.0)
@@ -52,8 +58,7 @@ _Pragma("clang diagnostic pop")
 
 
 // 对服务端状态定义
-#define ktvSuccess                          @"Success"
-#define ktvCode                             @"00000"
+#define ktvCodeSuccess                      @"00000"
 #define ktvDetail                           @"detail"
 #define ktvInvalidateToken                  @"2"
 #define ktvHeaderTokenNull                  @"1"

@@ -21,6 +21,8 @@
 + (void)saveUserInfo:(NSDictionary *)userInfo;
 /// 设置用户信息
 + (void)setUserInfoKey:(NSString *)infoKey infoValue:(NSString *)infoValue;
+/// 保持ktv token
++ (void)saveKvtToken:(NSString *)ktvToken;
 /// 获取token
 + (NSString *)ktvToken;
 /// 移除token

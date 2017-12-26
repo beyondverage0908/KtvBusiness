@@ -11,6 +11,7 @@
 #import "KTVOrderCell.h"
 #import "KTVTableHeaderView.h"
 #import "KTVPublishActivityController.h"
+#import "KTVLoginController.h"
 
 @interface KTVHomeController ()<UITableViewDelegate, UITableViewDataSource>
 

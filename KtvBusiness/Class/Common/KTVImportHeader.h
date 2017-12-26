@@ -43,5 +43,8 @@
 #import "KTVBaseNavigationViewController.h"
 #import "KTVBaseTabBarViewController.h"
 
+// network service
+#import "KTVMainSvc.h"
+
 
 #endif /* KTVImportHeader_h */

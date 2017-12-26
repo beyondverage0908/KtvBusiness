@@ -1,9 +1,9 @@
 //
 //  KTVUser.m
-//  KtvBusiness
+//  KTVBariOS
 //
-//  Created by pingjun lin on 2017/12/9.
-//  Copyright © 2017年 ktv. All rights reserved.
+//  Created by pingjun lin on 2017/9/5.
+//  Copyright © 2017年 Lin. All rights reserved.
 //
 
 #import "KTVUser.h"
@@ -28,11 +28,10 @@
 }
 
 // 容器类转换
-//+ (NSDictionary *)modelContainerPropertyGenericClass {
-//    // value should be Class or Class name.
-//    return @{@"pictureList" : [KTVPicture class],
-//             @"videoList" : [KTVVideo class]};
-//}
-
++ (NSDictionary *)modelContainerPropertyGenericClass {
+    // value should be Class or Class name.
+    return @{@"pictureList" : [KTVPicture class],
+             @"videoList" : [KTVVideo class]};
+}
 
 @end

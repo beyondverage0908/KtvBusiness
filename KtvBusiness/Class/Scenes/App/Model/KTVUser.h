@@ -1,14 +1,18 @@
 //
 //  KTVUser.h
-//  KtvBusiness
+//  KTVBariOS
 //
-//  Created by pingjun lin on 2017/12/9.
-//  Copyright © 2017年 ktv. All rights reserved.
+//  Created by pingjun lin on 2017/9/5.
+//  Copyright © 2017年 Lin. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
+#import "KTVUserDetail.h"
+#import "KTVPicture.h"
+#import "KTVVideo.h"
 
 @interface KTVUser : NSObject
+
 
 @property (nonatomic, strong) NSString *account; // 自定义属性
 
@@ -30,8 +34,8 @@
 
 
 @property (nonatomic, strong) NSString * gender;    // 自定义属性
-//@property (nonatomic, strong) KTVUserDetail *userDetail;
-//@property (nonatomic, strong) NSArray<KTVPicture *> * pictureList;
-//@property (nonatomic, strong) NSArray<KTVVideo *> * videoList;
+@property (nonatomic, strong) KTVUserDetail *userDetail;
+@property (nonatomic, strong) NSArray<KTVPicture *> * pictureList;
+@property (nonatomic, strong) NSArray<KTVVideo *> * videoList;
 
 @end
