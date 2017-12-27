@@ -19,4 +19,7 @@ typedef void(^ResponseSuccess)(NSDictionary *result);
 /// 获取门店信息
 + (void)getStore:(NSString *)storeId result:(ResponseSuccess)responseResult;
 
+/// 查询订单
++ (void)postSearchOrderParams:(NSDictionary *)params result:(ResponseSuccess)responseResult;
+
 @end

@@ -12,6 +12,7 @@
 #import "KTVTableHeaderView.h"
 #import "KTVPublishActivityController.h"
 #import "KTVLoginController.h"
+#import "KTVOrder.h"
 
 @interface KTVHomeController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -19,6 +20,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *scanBtn;
 @property (weak, nonatomic) IBOutlet UISearchBar *homeSearchBar;
 @property (weak, nonatomic) IBOutlet UITableView *tableview;
+
+@property (strong, nonatomic) NSMutableArray<KTVOrder *> *matchOrderList;
 
 @end
 
@@ -30,6 +33,8 @@
     self.tableview.backgroundColor = [UIColor ktvBG];
     self.tableview.delegate = self;
     self.tableview.dataSource = self;
+    
+    [self loadNewMatchOrder];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -44,6 +49,27 @@
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+#pragma mark - 网络
+
+- (void)loadNewMatchOrder {
+    NSString *username = safetyString([KTVCommon userInfo].username);
+    NSNumber *orderStatu = @(-1);
+    username = @"18939865729";
+    NSDictionary *params = @{@"username" : username, @"orderStatus" : orderStatu};
+    
+    [KTVMainSvc postSearchOrderParams:params result:^(NSDictionary *result) {
+        if ([result[@"code"] isEqualToString:ktvCodeSuccess]) {
+            safetyArray(self.matchOrderList);
+            for (NSDictionary *dic in result[@"data"]) {
+                KTVOrder *order = [KTVOrder yy_modelWithDictionary:dic];
+                [self.matchOrderList addObject:order];
+            }
+            
+            [self.tableview reloadData];
+        }
+    }];
 }
 
 #pragma mark - 事件

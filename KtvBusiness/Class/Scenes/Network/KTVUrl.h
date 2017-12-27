@@ -152,7 +152,7 @@
 + (NSString *)getOrderUpdateStatusUrl;
 
 /// 查询订单 
-+ (NSString *)getSearchOrderUrl;
++ (NSString *)postSearchOrderUrl;
 
 /// 根据距离查询门店
 + (NSString *)getLocalOrderUrl;

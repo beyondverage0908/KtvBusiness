@@ -266,6 +266,8 @@ static KTVNetworkHelper *_instance = nil;
 
 - (void)setHttpHeaderFieldWithMessage:(KTVRequestMessage *)message {
 
+    CLog(@"ktvtoken = %@", [KTVCommon ktvToken]);
+    
     if (![KTVUtil isNullString:[KTVCommon ktvToken]]) {
         [_manager.requestSerializer setValue:[KTVCommon ktvToken] forHTTPHeaderField:@"token"];
     } else {

@@ -68,6 +68,8 @@
 		334EFEDC1FEFB48F003B34C5 /* KTVPackage.m in Sources */ = {isa = PBXBuildFile; fileRef = 334EFECD1FEFB48F003B34C5 /* KTVPackage.m */; };
 		334EFEDD1FEFB48F003B34C5 /* KTVUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 334EFECE1FEFB48F003B34C5 /* KTVUser.m */; };
 		334EFEDE1FEFB48F003B34C5 /* KTVVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 334EFED01FEFB48F003B34C5 /* KTVVideo.m */; };
+		33C7C1BC1FF297BF00845CA6 /* KTVOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7C1BB1FF297BF00845CA6 /* KTVOrder.m */; };
+		33ED61641FF37CAD00C9813C /* Prj_tip.md in Resources */ = {isa = PBXBuildFile; fileRef = 33ED61631FF37CAD00C9813C /* Prj_tip.md */; };
 		33F371CD1FE50F4A00799C66 /* KTVMineHeadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F371CC1FE50F4A00799C66 /* KTVMineHeadCell.m */; };
 		33F371D01FE50F8300799C66 /* KTVMineOptionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F371CF1FE50F8300799C66 /* KTVMineOptionCell.m */; };
 		33F371D31FE527A300799C66 /* KTVAboutAppController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F371D21FE527A300799C66 /* KTVAboutAppController.m */; };
@@ -213,6 +215,9 @@
 		334EFECF1FEFB48F003B34C5 /* KTVUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTVUser.h; sourceTree = "<group>"; };
 		334EFED01FEFB48F003B34C5 /* KTVVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTVVideo.m; sourceTree = "<group>"; };
 		334EFED11FEFB48F003B34C5 /* KTVBanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTVBanner.h; sourceTree = "<group>"; };
+		33C7C1BA1FF297BF00845CA6 /* KTVOrder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTVOrder.h; sourceTree = "<group>"; };
+		33C7C1BB1FF297BF00845CA6 /* KTVOrder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTVOrder.m; sourceTree = "<group>"; };
+		33ED61631FF37CAD00C9813C /* Prj_tip.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Prj_tip.md; sourceTree = "<group>"; };
 		33F371CB1FE50F4A00799C66 /* KTVMineHeadCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTVMineHeadCell.h; sourceTree = "<group>"; };
 		33F371CC1FE50F4A00799C66 /* KTVMineHeadCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTVMineHeadCell.m; sourceTree = "<group>"; };
 		33F371CE1FE50F8300799C66 /* KTVMineOptionCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTVMineOptionCell.h; sourceTree = "<group>"; };
@@ -360,6 +365,7 @@
 			children = (
 				333035481FDBC809001B47D7 /* Info.plist */,
 				333035491FDBC809001B47D7 /* main.m */,
+				33ED61631FF37CAD00C9813C /* Prj_tip.md */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -745,6 +751,8 @@
 				334EFEC21FEFB48D003B34C5 /* KTVUserDetail.m */,
 				334EFEBB1FEFB48C003B34C5 /* KTVVideo.h */,
 				334EFED01FEFB48F003B34C5 /* KTVVideo.m */,
+				33C7C1BA1FF297BF00845CA6 /* KTVOrder.h */,
+				33C7C1BB1FF297BF00845CA6 /* KTVOrder.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -905,6 +913,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				331A49EA1FDFAF4A00E119B8 /* KTVBusinessActivityView.xib in Resources */,
+				33ED61641FF37CAD00C9813C /* Prj_tip.md in Resources */,
 				333035141FDBBBAE001B47D7 /* LaunchScreen.storyboard in Resources */,
 				3330358D1FDBCFE1001B47D7 /* Info.storyboard in Resources */,
 				333035891FDBCF6B001B47D7 /* Home.storyboard in Resources */,
@@ -994,6 +1003,7 @@
 				3330357D1FDBCA3A001B47D7 /* UIButton+KTVExtension.m in Sources */,
 				334EFED21FEFB48F003B34C5 /* KTVAddress.m in Sources */,
 				333035BD1FDBE6DA001B47D7 /* KTVToast.m in Sources */,
+				33C7C1BC1FF297BF00845CA6 /* KTVOrder.m in Sources */,
 				333035B01FDBD90C001B47D7 /* KTVInfoController.m in Sources */,
 				334EFEDA1FEFB48F003B34C5 /* KTVActivity.m in Sources */,
 				3330357E1FDBCA3A001B47D7 /* UIImageView+extension.m in Sources */,
