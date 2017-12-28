@@ -48,6 +48,15 @@
 		333035D31FDBE7FE001B47D7 /* KTVNetworkHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 333035CD1FDBE7FE001B47D7 /* KTVNetworkHelper.m */; };
 		333035D41FDBE7FE001B47D7 /* KTVRequestMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 333035CE1FDBE7FE001B47D7 /* KTVRequestMessage.m */; };
 		333035D51FDBE7FE001B47D7 /* KTVUrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 333035D11FDBE7FE001B47D7 /* KTVUrl.m */; };
+		333069551FF542C200A6ECEE /* placeholder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3330694E1FF542C100A6ECEE /* placeholder@2x.png */; };
+		333069561FF542C200A6ECEE /* SDCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 333069521FF542C100A6ECEE /* SDCycleScrollView.m */; };
+		333069571FF542C200A6ECEE /* UIView+SDExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 333069531FF542C100A6ECEE /* UIView+SDExtension.m */; };
+		333069581FF542C200A6ECEE /* SDCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 333069541FF542C100A6ECEE /* SDCollectionViewCell.m */; };
+		3330695B1FF542FF00A6ECEE /* KTVBannerCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3330695A1FF542FF00A6ECEE /* KTVBannerCell.m */; };
+		333069651FF544EA00A6ECEE /* TADotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3330695E1FF544EA00A6ECEE /* TADotView.m */; };
+		333069661FF544EA00A6ECEE /* TAPageControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 3330695F1FF544EA00A6ECEE /* TAPageControl.m */; };
+		333069671FF544EA00A6ECEE /* TAAnimatedDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 333069601FF544EA00A6ECEE /* TAAnimatedDotView.m */; };
+		333069681FF544EA00A6ECEE /* TAAbstractDotView.m in Sources */ = {isa = PBXBuildFile; fileRef = 333069611FF544EA00A6ECEE /* TAAbstractDotView.m */; };
 		33389C091FDD2B1E0091BA7C /* KTVPublishActivityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33389C081FDD2B1E0091BA7C /* KTVPublishActivityCell.m */; };
 		33389C0C1FDD2B400091BA7C /* KTVOrderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33389C0B1FDD2B400091BA7C /* KTVOrderCell.m */; };
 		33389C0F1FDD309C0091BA7C /* KTVTableHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33389C0E1FDD309C0091BA7C /* KTVTableHeaderView.m */; };
@@ -175,6 +184,23 @@
 		333035D11FDBE7FE001B47D7 /* KTVUrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTVUrl.m; sourceTree = "<group>"; };
 		333035D21FDBE7FE001B47D7 /* KTVRequestMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTVRequestMessage.h; sourceTree = "<group>"; };
 		333035D61FDBE84D001B47D7 /* KTVToastDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTVToastDefine.h; sourceTree = "<group>"; };
+		3330694E1FF542C100A6ECEE /* placeholder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "placeholder@2x.png"; sourceTree = "<group>"; };
+		3330694F1FF542C100A6ECEE /* UIView+SDExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SDExtension.h"; sourceTree = "<group>"; };
+		333069501FF542C100A6ECEE /* SDCycleScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDCycleScrollView.h; sourceTree = "<group>"; };
+		333069511FF542C100A6ECEE /* SDCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDCollectionViewCell.h; sourceTree = "<group>"; };
+		333069521FF542C100A6ECEE /* SDCycleScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCycleScrollView.m; sourceTree = "<group>"; };
+		333069531FF542C100A6ECEE /* UIView+SDExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SDExtension.m"; sourceTree = "<group>"; };
+		333069541FF542C100A6ECEE /* SDCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDCollectionViewCell.m; sourceTree = "<group>"; };
+		333069591FF542FF00A6ECEE /* KTVBannerCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTVBannerCell.h; sourceTree = "<group>"; };
+		3330695A1FF542FF00A6ECEE /* KTVBannerCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTVBannerCell.m; sourceTree = "<group>"; };
+		3330695D1FF544EA00A6ECEE /* TAAbstractDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAbstractDotView.h; sourceTree = "<group>"; };
+		3330695E1FF544EA00A6ECEE /* TADotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TADotView.m; sourceTree = "<group>"; };
+		3330695F1FF544EA00A6ECEE /* TAPageControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAPageControl.m; sourceTree = "<group>"; };
+		333069601FF544EA00A6ECEE /* TAAnimatedDotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAAnimatedDotView.m; sourceTree = "<group>"; };
+		333069611FF544EA00A6ECEE /* TAAbstractDotView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TAAbstractDotView.m; sourceTree = "<group>"; };
+		333069621FF544EA00A6ECEE /* TADotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TADotView.h; sourceTree = "<group>"; };
+		333069631FF544EA00A6ECEE /* TAAnimatedDotView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAAnimatedDotView.h; sourceTree = "<group>"; };
+		333069641FF544EA00A6ECEE /* TAPageControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TAPageControl.h; sourceTree = "<group>"; };
 		33389C071FDD2B1E0091BA7C /* KTVPublishActivityCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTVPublishActivityCell.h; sourceTree = "<group>"; };
 		33389C081FDD2B1E0091BA7C /* KTVPublishActivityCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTVPublishActivityCell.m; sourceTree = "<group>"; };
 		33389C0A1FDD2B400091BA7C /* KTVOrderCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTVOrderCell.h; sourceTree = "<group>"; };
@@ -422,6 +448,8 @@
 		333035521FDBC980001B47D7 /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				3330695C1FF544EA00A6ECEE /* PageControl */,
+				3330694D1FF542C100A6ECEE /* SDCycleScrollView */,
 			);
 			path = ThirdParty;
 			sourceTree = "<group>";
@@ -522,6 +550,8 @@
 				331A49E61FDFAF3900E119B8 /* KTVBusinessActivityView.h */,
 				331A49E71FDFAF3900E119B8 /* KTVBusinessActivityView.m */,
 				331A49E91FDFAF4A00E119B8 /* KTVBusinessActivityView.xib */,
+				333069591FF542FF00A6ECEE /* KTVBannerCell.h */,
+				3330695A1FF542FF00A6ECEE /* KTVBannerCell.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -786,6 +816,35 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		3330694D1FF542C100A6ECEE /* SDCycleScrollView */ = {
+			isa = PBXGroup;
+			children = (
+				3330694E1FF542C100A6ECEE /* placeholder@2x.png */,
+				3330694F1FF542C100A6ECEE /* UIView+SDExtension.h */,
+				333069501FF542C100A6ECEE /* SDCycleScrollView.h */,
+				333069511FF542C100A6ECEE /* SDCollectionViewCell.h */,
+				333069521FF542C100A6ECEE /* SDCycleScrollView.m */,
+				333069531FF542C100A6ECEE /* UIView+SDExtension.m */,
+				333069541FF542C100A6ECEE /* SDCollectionViewCell.m */,
+			);
+			path = SDCycleScrollView;
+			sourceTree = "<group>";
+		};
+		3330695C1FF544EA00A6ECEE /* PageControl */ = {
+			isa = PBXGroup;
+			children = (
+				3330695D1FF544EA00A6ECEE /* TAAbstractDotView.h */,
+				3330695E1FF544EA00A6ECEE /* TADotView.m */,
+				3330695F1FF544EA00A6ECEE /* TAPageControl.m */,
+				333069601FF544EA00A6ECEE /* TAAnimatedDotView.m */,
+				333069611FF544EA00A6ECEE /* TAAbstractDotView.m */,
+				333069621FF544EA00A6ECEE /* TADotView.h */,
+				333069631FF544EA00A6ECEE /* TAAnimatedDotView.h */,
+				333069641FF544EA00A6ECEE /* TAPageControl.h */,
+			);
+			path = PageControl;
+			sourceTree = "<group>";
+		};
 		8E2EE5CA3CD691D91EA9E5A7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -913,6 +972,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				331A49EA1FDFAF4A00E119B8 /* KTVBusinessActivityView.xib in Resources */,
+				333069551FF542C200A6ECEE /* placeholder@2x.png in Resources */,
 				33ED61641FF37CAD00C9813C /* Prj_tip.md in Resources */,
 				333035141FDBBBAE001B47D7 /* LaunchScreen.storyboard in Resources */,
 				3330358D1FDBCFE1001B47D7 /* Info.storyboard in Resources */,
@@ -1009,8 +1069,10 @@
 				3330357E1FDBCA3A001B47D7 /* UIImageView+extension.m in Sources */,
 				334EFE8A1FEF8439003B34C5 /* KTVSettingController.m in Sources */,
 				3330357A1FDBCA3A001B47D7 /* UIViewController+StoryboardHelper.m in Sources */,
+				333069561FF542C200A6ECEE /* SDCycleScrollView.m in Sources */,
 				333035AD1FDBD8F4001B47D7 /* KTVHallController.m in Sources */,
 				333035821FDBCA3A001B47D7 /* UILabel+Ktv.m in Sources */,
+				333069671FF544EA00A6ECEE /* TAAnimatedDotView.m in Sources */,
 				333035BC1FDBE6DA001B47D7 /* KTVAlertController.m in Sources */,
 				334EFED31FEFB48F003B34C5 /* KTVGroupbuy.m in Sources */,
 				333035471FDBC7F7001B47D7 /* AppDelegate.m in Sources */,
@@ -1018,10 +1080,12 @@
 				334EFED51FEFB48F003B34C5 /* KTVStoreContainer.m in Sources */,
 				334EFEDE1FEFB48F003B34C5 /* KTVVideo.m in Sources */,
 				333035D31FDBE7FE001B47D7 /* KTVNetworkHelper.m in Sources */,
+				333069581FF542C200A6ECEE /* SDCollectionViewCell.m in Sources */,
 				3330357F1FDBCA3A001B47D7 /* NSDate+Processing.m in Sources */,
 				331A49E81FDFAF3900E119B8 /* KTVBusinessActivityView.m in Sources */,
 				334EFE901FEFA7FF003B34C5 /* KTVLoginGuideController.m in Sources */,
 				334EFEDC1FEFB48F003B34C5 /* KTVPackage.m in Sources */,
+				333069681FF544EA00A6ECEE /* TAAbstractDotView.m in Sources */,
 				33389C0F1FDD309C0091BA7C /* KTVTableHeaderView.m in Sources */,
 				334EFED81FEFB48F003B34C5 /* KTVStore.m in Sources */,
 				333035781FDBCA3A001B47D7 /* MBProgressHUD+KTV.m in Sources */,
@@ -1030,6 +1094,8 @@
 				333035BE1FDBE6DA001B47D7 /* KTVUtil.m in Sources */,
 				334EFE8D1FEF9A69003B34C5 /* KTVMainSvc.m in Sources */,
 				3330354B1FDBC809001B47D7 /* main.m in Sources */,
+				333069571FF542C200A6ECEE /* UIView+SDExtension.m in Sources */,
+				333069661FF544EA00A6ECEE /* TAPageControl.m in Sources */,
 				33F371D31FE527A300799C66 /* KTVAboutAppController.m in Sources */,
 				333035B31FDBD91B001B47D7 /* KTVMineController.m in Sources */,
 				334EFE871FEF5BA4003B34C5 /* KTVLoginController.m in Sources */,
@@ -1040,7 +1106,9 @@
 				33F371D61FE5298A00799C66 /* KTVHistoryOrderController.m in Sources */,
 				333035791FDBCA3A001B47D7 /* UIImage+extension.m in Sources */,
 				334EFED71FEFB48F003B34C5 /* KTVUserDetail.m in Sources */,
+				333069651FF544EA00A6ECEE /* TADotView.m in Sources */,
 				33F371D01FE50F8300799C66 /* KTVMineOptionCell.m in Sources */,
+				3330695B1FF542FF00A6ECEE /* KTVBannerCell.m in Sources */,
 				33389C0C1FDD2B400091BA7C /* KTVOrderCell.m in Sources */,
 				333035BF1FDBE6DA001B47D7 /* KTVCommon.m in Sources */,
 				333035811FDBCA3A001B47D7 /* UIColor+KTVSkin.m in Sources */,

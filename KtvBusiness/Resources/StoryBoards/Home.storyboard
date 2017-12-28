@@ -317,12 +317,15 @@
                                                 <connections>
                                                     <outlet property="activityNickname" destination="O7W-0Q-UgN" id="Vn3-e0-8N2"/>
                                                     <outlet property="castTypeLabel" destination="436-Pz-Wfc" id="fKK-NM-iMw"/>
+                                                    <outlet property="confirmBtn" destination="e4n-Qf-KmL" id="hyq-PQ-SHP"/>
+                                                    <outlet property="ignoreBtn" destination="5cr-Ki-iBq" id="geL-cF-nCt"/>
                                                     <outlet property="moneyLabel" destination="vB5-Vx-yQb" id="By6-zK-M74"/>
                                                     <outlet property="nicknameLabel" destination="5Sw-yM-qQl" id="5BX-vr-UNb"/>
                                                     <outlet property="orderNoLabel" destination="bYV-Is-dcv" id="wGv-CY-FfT"/>
                                                     <outlet property="orderStatusLabel" destination="WC8-RZ-iPm" id="2R9-0a-b7o"/>
                                                     <outlet property="orderTimeLable" destination="Irl-zK-i9n" id="DDa-O0-peV"/>
                                                     <outlet property="phoneLabel" destination="dez-0S-jqI" id="DTV-ka-VUp"/>
+                                                    <outlet property="responseBtn" destination="62r-Kb-dEM" id="f3X-BK-qLA"/>
                                                     <outlet property="usePasswordLabel" destination="SWI-kP-2lL" id="kVj-8J-EPS"/>
                                                     <outlet property="useTimeLabel" destination="tUE-BA-NiG" id="VWz-6Q-vGe"/>
                                                 </connections>

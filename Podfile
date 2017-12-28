@@ -12,5 +12,6 @@ pod 'YYModel'
 pod 'SDWebImage', '~> 4.0'
 pod 'MBProgressHUD'
 pod 'IQKeyboardManager'
+pod 'MJRefresh', '~>3.1.13'
 
 end 

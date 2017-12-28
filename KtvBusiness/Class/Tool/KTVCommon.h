@@ -31,5 +31,9 @@
 + (void)saveUserLocation:(NSString *)locationString;
 /// 返回经纬度数组，纬度为第一个元素，经度为第二个元素，获取不到则为nil
 + (KTVAddress *)getUserLocation;
+/// 根据订单类型获获取具体订单
++ (NSString *)orderDescriptionType:(NSInteger)type;
+// orderStatus 99:全部 -1:未支付，0,已支付, 1未响应，2未使用，3被商家忽略，4已响应，5待评论，，6已取消，7已结束
++ (NSString *)orderStatusDescriptin:(NSInteger)orderStatus;
 
 @end

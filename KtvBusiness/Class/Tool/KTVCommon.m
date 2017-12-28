@@ -81,4 +81,112 @@
     return address;
 }
 
+//orderType 1套餐，2酒吧位置价格  3包厢类型的价格 ,4暖场人，5 单点商品的价格如果是单点商品，会出现数量为2的情况），6普通邀约人（这个单价为0）7 团购  8 活动
++ (NSString *)orderDescriptionType:(NSInteger)type {
+    switch (type) {
+        case 1:
+        {
+            return @"套餐";
+        }
+            break;
+        case 2:
+        {
+            return @"酒吧";
+        }
+            break;
+        case 3:
+        {
+            return @"包厢";
+        }
+            break;
+        case 4:
+        {
+            return @"暖场人";
+        }
+            break;
+        case 5:
+        {
+            return @"单点商品";
+        }
+            break;
+        case 6:
+        {
+            return @"普通邀约人";
+        }
+            break;
+        case 7:
+        {
+            return @"团购";
+        }
+            break;
+        case 8:
+        {
+            return @"活动";
+        }
+            break;
+            
+        default:
+        {
+            return @"";
+        }
+            break;
+    }
+}
+
+// orderStatus 99:全部 -1:未支付，0,已支付, 1未响应，2未使用，3被商家忽略，4已响应，5待评论，，6已取消，7已结束
++ (NSString *)orderStatusDescriptin:(NSInteger)orderStatus {
+    switch (orderStatus) {
+        case -1:
+        {
+            return @"未支付";
+        }
+            break;
+        case 0:
+        {
+            return @"已支付";
+        }
+            break;
+        case 1:
+        {
+            return @"未响应";
+        }
+            break;
+        case 2:
+        {
+            return @"未使用";
+        }
+            break;
+        case 3:
+        {
+            return @"被商家忽略";
+        }
+            break;
+        case 4:
+        {
+            return @"已响应";
+        }
+            break;
+        case 5:
+        {
+            return @"待评论";
+        }
+            break;
+        case 6:
+        {
+            return @"已取消";
+        }
+            break;
+        case 7:
+        {
+            return @"已结束";
+        }
+            break;
+        default:
+        {
+            return @"";
+        }
+            break;
+    }
+}
+
 @end

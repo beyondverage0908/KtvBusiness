@@ -29,6 +29,7 @@ _Pragma("clang diagnostic pop")
 #define safetyNumber(var) (var = var ? var : []);
 #define safetyArray(var) (var = var ? var : [NSMutableArray array]);
 #define safetyDictionary(var) (var = var ? var : [NSMutableDictionary dictionary]);
+#define formatString(var) [NSString stringWithFormat:@"%@", var ? var : @""]
 
 #define iOS7 ([[UIDevice currentDevice].systemVersion doubleValue] >= 7.0)
 #define iOS8 ([[UIDevice currentDevice].systemVersion doubleValue] >= 8.0)
