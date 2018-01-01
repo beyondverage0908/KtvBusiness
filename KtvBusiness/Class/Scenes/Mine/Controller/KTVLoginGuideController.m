@@ -21,16 +21,10 @@
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor ktvBG];
     
+    [self rootOfLoginViewController];
+
     if ([self isLogin]) {
-        [self rootControllerOfMainTabbarController];
-    } else {
-        KTVLoginController *loginVC = [UIViewController storyboardName:@"Mine" storyboardId:@"KTVLoginController"];
-        weakify(self);
-        loginVC.loginSuccessBC = ^{
-            [weakself dismissViewControllerAnimated:YES completion:nil];
-            [weakself rootControllerOfMainTabbarController];
-        };
-        [self presentViewController:loginVC animated:YES completion:nil];
+        [self pushOfMainTabbarControllerByPush];
     }
 }
 
@@ -43,10 +37,21 @@
     return ktvtoken ? YES : NO;
 }
 
-- (void)rootControllerOfMainTabbarController {
+- (void)rootOfLoginViewController {
+    // 默认登陆作为第一个栈里面的第一个页面
+    KTVLoginController *loginVC = [UIViewController storyboardName:@"Mine" storyboardId:@"KTVLoginController"];
+    self.navigationController.navigationBar.hidden = YES;
+    weakify(self);
+    loginVC.loginSuccessBC = ^{
+        [weakself pushOfMainTabbarControllerByPush];
+    };
+    [self.navigationController pushViewController:loginVC animated:NO];
+}
+
+- (void)pushOfMainTabbarControllerByPush {
     KTVBaseTabBarViewController *rootVC = [UIViewController storyboardName:@"Main" storyboardId:@"KTVBaseTabBarViewController"];
-    [UIApplication sharedApplication].keyWindow.rootViewController = rootVC;
-    [[UIApplication sharedApplication].keyWindow makeKeyAndVisible];
+    self.navigationController.navigationBar.hidden = YES;
+    [self.navigationController pushViewController:rootVC animated:NO];
 }
 
 @end

@@ -37,7 +37,6 @@
     
     NSAttributedString *passwordStr = [[NSAttributedString alloc] initWithString:@"请填写密码" attributes:attrs]; // 初始化富文本占位字符串
     self.passwordTF.attributedPlaceholder = passwordStr;
-    
 }
 
 #pragma mark - 网络
@@ -52,19 +51,48 @@
         [KTVMainSvc postCommonLoginParams:param result:^(NSDictionary *result) {
             [MBProgressHUD hiddenHUD];
             if ([result[@"code"] isEqualToString:ktvCodeSuccess]) {
-                if (weakself.loginSuccessBC) {
-                    weakself.loginSuccessBC();
-                }
-                [KTVToast toast:@"登陆成功"];
                 NSString *token = result[@"data"][@"token"];
                 [KTVCommon saveKvtToken:token];
                 [KTVCommon setUserInfoKey:@"phone" infoValue:account];
                 [KTVCommon setUserInfoKey:@"username" infoValue:account];
+                
+                [weakself loadQueryStore];
+            } else {
+                [KTVToast toast:result[@"detail"]];
             }
         }];
     } else {
         [KTVToast toast:@"补全信息再提交登陆"];
     }
+}
+
+/// 获取商家信息
+- (void)loadQueryStore {
+    NSString *phone = [KTVCommon userInfo].phone;
+    safetyString(phone);
+    weakify(self);
+    [MBProgressHUD showMessage:@"登陆成功，正在关联商家信息..."];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [KTVMainSvc getQueryStore:phone result:^(NSDictionary *result) {
+            [MBProgressHUD hiddenHUD];
+            if ([result[@"code"] isEqualToString:ktvCodeSuccess]) {
+                strongify(weakself);
+                if (strongSelf.loginSuccessBC) {
+                    strongSelf.loginSuccessBC();
+                }
+                if ([result[@"data"] count]) {
+                    NSString *storeId = [NSString stringWithFormat:@"%@", [result[@"data"] firstObject]];
+                    [KTVCommon saveStoreId:storeId];
+                }
+            } else {
+                // 注销本地数据
+                [KTVCommon removeKtvToken];
+                [KTVCommon resignUserInfo];
+                
+                [KTVToast toast:result[@"detail"]];
+            }
+        }];
+    });
 }
 
 #pragma mark - 事件

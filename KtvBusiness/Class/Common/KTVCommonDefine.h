@@ -21,14 +21,14 @@
 #define strongify(var) \
 _Pragma("clang diagnostic push") \
 _Pragma("clang diagnostic ignored \"-Wshadow\"") \
-__strong typeof(var) var = weak##var; \
+__strong typeof(var) strongSelf = var; \
 _Pragma("clang diagnostic pop")
 
 // 判断字符串是否nil
-#define safetyString(var) (var = var ? var : @"");
-#define safetyNumber(var) (var = var ? var : []);
-#define safetyArray(var) (var = var ? var : [NSMutableArray array]);
-#define safetyDictionary(var) (var = var ? var : [NSMutableDictionary dictionary]);
+#define safetyString(var) (var = (var) ? (var) : @"")
+#define safetyNumber(var) (var = var ? var : [])
+#define safetyArray(var) (var = var ? var : [NSMutableArray array])
+#define safetyDictionary(var) (var = var ? var : [NSMutableDictionary dictionary])
 #define formatString(var) [NSString stringWithFormat:@"%@", var ? var : @""]
 
 #define iOS7 ([[UIDevice currentDevice].systemVersion doubleValue] >= 7.0)

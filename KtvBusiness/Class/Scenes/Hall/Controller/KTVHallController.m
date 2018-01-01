@@ -49,7 +49,7 @@
     // orderStatus 99:全部 -1:未支付，0,已支付, 1未响应，2未使用，3被商家忽略，4已响应，5待评论，，6已取消，7已结束
     NSString *username = safetyString([KTVCommon userInfo].username);
     NSNumber *ostatu = @(orderStatu);
-    username = @"18939865729";
+    //username = @"18939865729";
     NSDictionary *params = @{@"username" : username, @"orderStatus" : ostatu};
     
     [KTVMainSvc postSearchOrderParams:params result:^(NSDictionary *result) {

@@ -57,6 +57,9 @@
 /// 及时更新用户的地址
 + (NSString *)getRecentUserAddressUrl;
 
+/// 更具商家账号，关联店铺信息
++ (NSString *)getQueryStore;
+
 #pragma mark - 用户动态
 
 + (NSString *)getUserDynamicStatementUrl;

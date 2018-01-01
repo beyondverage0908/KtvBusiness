@@ -22,6 +22,10 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
+    
+    self.businessNameLabel.text = @"小天面包店";
+    NSString *phone = [KTVCommon userInfo].phone;
+    self.phoneLabel.text = safetyString(phone);
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

@@ -65,6 +65,14 @@
     return [KTVUtil objectForKey:@"ktvToken"];
 }
 
++ (void)saveStoreId:(NSString *)storeId {
+    [KTVUtil setObject:storeId forKey:@"KTVStoreId"];
+}
+
++ (NSString *)getStoreId {
+    return [KTVUtil objectForKey:@"KTVStoreId"];
+}
+
 + (void)saveUserLocation:(NSString *)locationString {
     [KTVUtil setObject:locationString forKey:@"lat:long"];
 }

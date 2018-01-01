@@ -11,7 +11,6 @@
 #import "KTVOrderCell.h"
 #import "KTVTableHeaderView.h"
 #import "KTVPublishActivityController.h"
-#import "KTVLoginController.h"
 #import "KTVOrder.h"
 #import "KTVBannerCell.h"
 #import "KTVBanner.h"
@@ -43,6 +42,7 @@
     safetyArray(self.bannerList);
     
     [self loadNewMatchOrder];
+    [self loadUserInfo];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -88,7 +88,7 @@
     // orderStatus 99:全部 -1:未支付，0,已支付, 1未响应，2未使用，3被商家忽略，4已响应，5待评论，，6已取消，7已结束
     NSString *username = safetyString([KTVCommon userInfo].username);
     NSNumber *orderStatu = @(0);
-    username = @"18939865729";
+    //username = @"18939865729";
     NSDictionary *params = @{@"username" : username, @"orderStatus" : orderStatu};
     
     [KTVMainSvc postSearchOrderParams:params result:^(NSDictionary *result) {
@@ -104,6 +104,17 @@
             } else {
                 [KTVToast toast:@"系统暂未匹配到订单"];
             }
+        }
+    }];
+}
+
+/// 缓存用户信息
+- (void)loadUserInfo {
+    NSString *phone = [KTVCommon userInfo].phone;
+    safetyString(phone);
+    [KTVMainSvc getUserInfoWithPhone:phone result:^(NSDictionary *result) {
+        if ([result[@"code"] isEqualToString:ktvCodeSuccess]) {
+            [KTVCommon saveUserInfo:result[@"data"]];
         }
     }];
 }

@@ -81,6 +81,11 @@
     return @"/api/login/user/recentStatus";
 }
 
+// 更具商家账号，关联店铺信息
++ (NSString *) getQueryStore {
+    return @"/api/login/user/queryStore/";
+}
+
 #pragma mark - 用户动态
 
 + (NSString *)getUserDynamicStatementUrl {

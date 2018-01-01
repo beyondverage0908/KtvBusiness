@@ -30,7 +30,8 @@
 #pragma mark - 网络
 
 - (void)loadStoreInfo {
-    NSString *storeId = @"4";
+    NSString *storeId = [KTVCommon getStoreId];
+    // storeId = @"4";
     weakify(self);
     [KTVMainSvc getStore:storeId result:^(NSDictionary *result) {
         if ([result[@"code"] isEqualToString:ktvCodeSuccess]) {

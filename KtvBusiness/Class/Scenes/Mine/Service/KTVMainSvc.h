@@ -22,4 +22,13 @@ typedef void(^ResponseSuccess)(NSDictionary *result);
 /// 查询订单
 + (void)postSearchOrderParams:(NSDictionary *)params result:(ResponseSuccess)responseResult;
 
+/// 退出登陆
++ (void)postLogoutParams:(NSDictionary *)params result:(ResponseSuccess)responseResult;
+
+/// 获取用户信息
++ (void)getUserInfoWithPhone:(NSString *)phone result:(ResponseSuccess)responseResult;
+
+/// 根据账号，获取商家信息，
++ (void)getQueryStore:(NSString *)phone result:(ResponseSuccess)responseResult;
+
 @end

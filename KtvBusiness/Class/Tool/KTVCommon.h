@@ -25,6 +25,10 @@
 + (void)saveKvtToken:(NSString *)ktvToken;
 /// 获取token
 + (NSString *)ktvToken;
+/// 本地化storeId
++ (void)saveStoreId:(NSString *)storeId;
+/// 获取storeId
++ (NSString *)getStoreId;
 /// 移除token
 + (void)removeKtvToken;
 /// 以key值为 lat:long(纬经)

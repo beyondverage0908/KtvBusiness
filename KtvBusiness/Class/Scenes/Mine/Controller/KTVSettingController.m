@@ -24,6 +24,26 @@
 
 - (IBAction)logoutAction:(id)sender {
     CLog(@"--->>> 退出登陆");
-    [self.navigationController popViewControllerAnimated:YES];
+    NSString *token = [KTVCommon ktvToken];
+    NSDictionary *params = @{@"token" : safetyString(token)};
+    
+    [MBProgressHUD showMessage:@"注销登录中..."];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [KTVMainSvc postLogoutParams:params result:^(NSDictionary *result) {
+            [MBProgressHUD hiddenHUD];
+            if ([result[@"code"] isEqualToString:ktvCodeSuccess]) {
+                UINavigationController *rootNav = (UINavigationController *)self.tabBarController.parentViewController;
+                [rootNav popViewControllerAnimated:YES];
+                
+                // 注销本地数据
+                [KTVCommon removeKtvToken];
+                [KTVCommon resignUserInfo];
+            } else {
+                [KTVToast toast:@"无法退出"];
+            }
+        }];
+    });
 }
+
+
 @end
