@@ -10,4 +10,6 @@
 
 @interface KTVBusinessActivityView : UIView
 
+@property (nonatomic, copy) void (^activityCB)(NSDictionary *params);
+
 @end

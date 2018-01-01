@@ -56,7 +56,11 @@
                 [KTVCommon setUserInfoKey:@"phone" infoValue:account];
                 [KTVCommon setUserInfoKey:@"username" infoValue:account];
                 
-                [weakself loadQueryStore];
+                if (weakself.loginSuccessBC) {
+                    weakself.loginSuccessBC();
+                }
+                
+//                [weakself loadQueryStore];
             } else {
                 [KTVToast toast:result[@"detail"]];
             }
