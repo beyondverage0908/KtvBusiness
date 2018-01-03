@@ -7,16 +7,25 @@
 //
 
 #import "AppDelegate.h"
+#import <AMapFoundationKit/AMapFoundationKit.h>
 
 @interface AppDelegate ()
 
 @end
 
+const static NSString *APIKey = @"5856c004b15fbf833fce8acbf8b88cd1";
+
 @implementation AppDelegate
+
+- (void)configureGaodeAPIKey {
+    if (APIKey.length) {
+        [AMapServices sharedServices].apiKey = (NSString *)APIKey;
+    }
+}
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    [self configureGaodeAPIKey];
     return YES;
 }
 

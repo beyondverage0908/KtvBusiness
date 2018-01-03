@@ -60,7 +60,7 @@
 }
 
 + (void)setObject:(id)obj forKey:(NSString *)key {
-    if (!obj || !key || ![obj isKindOfClass:[NSObject class]] || ![key isKindOfClass:[NSString class]]) return;
+    if (!obj || !key || ![obj isKindOfClass:[NSObject class]] || ![key isKindOfClass:[NSString class]] || [obj isKindOfClass:[NSNull class]]) return;
     
     [[NSUserDefaults standardUserDefaults] setObject:obj forKey:key];
     [[NSUserDefaults standardUserDefaults] synchronize];

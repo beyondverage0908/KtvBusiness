@@ -60,7 +60,7 @@
                     weakself.loginSuccessBC();
                 }
                 
-//                [weakself loadQueryStore];
+                [weakself loadQueryStore];
             } else {
                 [KTVToast toast:result[@"detail"]];
             }

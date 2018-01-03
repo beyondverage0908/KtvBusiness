@@ -12,12 +12,14 @@
 #import "KTVAboutAppController.h"
 #import "KTVHistoryOrderController.h"
 #import "KTVSettingController.h"
+#import "KTVStore.h"
 
 @interface KTVMineController ()<UITableViewDelegate, UITableViewDataSource>
 {
     NSMutableArray<NSString *> *_cellTitleList;
 }
 @property (weak, nonatomic) IBOutlet UITableView *tableview;
+@property (strong, nonatomic) KTVStore *store;
 
 @end
 
@@ -32,6 +34,8 @@
     self.tableview.backgroundColor = [UIColor ktvBG];
     
     [self initData];
+    
+    [self loadStore];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -40,6 +44,21 @@
 
 - (void)initData {
     _cellTitleList = [NSMutableArray arrayWithObjects:@"历史订单",@"设置", @"关于", nil];
+}
+
+#pragma mark - 网络
+
+- (void)loadStore {
+    NSString *storeId = [KTVCommon getStoreId];
+    safetyString(storeId);
+    [KTVMainSvc getStore:storeId result:^(NSDictionary *result) {
+        if ([result[@"code"] isEqualToString:ktvCodeSuccess]) {
+            KTVStore *store = [KTVStore yy_modelWithDictionary:result[@"data"]];
+            self.store = store;
+            
+            [self.tableview reloadData];
+        }
+    }];
 }
 
 #pragma mark - UITableViewDelegate
@@ -86,6 +105,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
         KTVMineHeadCell *cell = [tableView dequeueReusableCellWithIdentifier:@"KTVMineHeadCell"];
+        cell.store = self.store;
         return cell;
     } else if (indexPath.section == 1) {
         NSString *title = _cellTitleList[indexPath.row];

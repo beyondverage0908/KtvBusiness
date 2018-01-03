@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "KTVStore.h"
 
 @interface KTVMineHeadCell : UITableViewCell
+
+@property (nonatomic, strong) KTVStore * store;
 
 @end

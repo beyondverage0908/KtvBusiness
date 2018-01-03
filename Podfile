@@ -14,4 +14,9 @@ pod 'MBProgressHUD'
 pod 'IQKeyboardManager'
 pod 'MJRefresh', '~>3.1.13'
 
+# 高德地图
+pod 'AMapLocation-NO-IDFA'  #定位功能
+pod 'AMapSearch-NO-IDFA'    #搜索功能 - 地理位置解析(经纬度->地理位置)
+pod 'AMap2DMap-NO-IDFA'
+
 end 

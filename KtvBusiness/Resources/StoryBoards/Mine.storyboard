@@ -48,28 +48,17 @@
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ktv_header_placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="B12-jF-Z8J">
                                                     <rect key="frame" x="0.0" y="0.0" width="375" height="145"/>
                                                 </imageView>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RSO-Jc-eEp">
-                                                    <rect key="frame" x="25" y="41.5" width="62" height="62"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="62" id="9o4-fX-BJQ"/>
-                                                        <constraint firstAttribute="height" constant="62" id="azf-OG-iGb"/>
-                                                    </constraints>
-                                                    <state key="normal" backgroundImage="ktv_user_placehoder"/>
-                                                    <connections>
-                                                        <action selector="clickHeadAction:" destination="1G7-zh-4vi" eventType="touchUpInside" id="mBZ-QX-Ccn"/>
-                                                    </connections>
-                                                </button>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vfK-zk-l1l">
-                                                    <rect key="frame" x="102" y="38" width="253" height="70"/>
+                                                    <rect key="frame" x="107" y="38" width="248" height="70"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="诺亚方舟酒吧商户平台" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ORT-2h-iEz">
-                                                            <rect key="frame" x="0.0" y="10" width="253" height="19.5"/>
+                                                            <rect key="frame" x="0.0" y="10" width="248" height="19.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="18516133629" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wch-2d-yCE">
-                                                            <rect key="frame" x="0.0" y="42" width="253" height="18"/>
+                                                            <rect key="frame" x="0.0" y="42" width="248" height="18"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
@@ -85,15 +74,22 @@
                                                         <constraint firstItem="ORT-2h-iEz" firstAttribute="top" secondItem="vfK-zk-l1l" secondAttribute="top" constant="10" id="s4q-to-T6Z"/>
                                                     </constraints>
                                                 </view>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ktv_user_placehoder" translatesAutoresizingMaskIntoConstraints="NO" id="Ogt-yk-Jlf">
+                                                    <rect key="frame" x="15" y="34" width="77" height="77"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="77" id="fKp-2F-5YS"/>
+                                                        <constraint firstAttribute="width" constant="77" id="srA-Wz-CoF"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstItem="Ogt-yk-Jlf" firstAttribute="leading" secondItem="FN7-WM-WdG" secondAttribute="leading" constant="15" id="0GU-Jb-8Aq"/>
+                                                <constraint firstItem="Ogt-yk-Jlf" firstAttribute="centerY" secondItem="FN7-WM-WdG" secondAttribute="centerY" id="9io-i1-hae"/>
                                                 <constraint firstItem="B12-jF-Z8J" firstAttribute="top" secondItem="FN7-WM-WdG" secondAttribute="top" id="EBh-nw-c5X"/>
-                                                <constraint firstItem="vfK-zk-l1l" firstAttribute="leading" secondItem="RSO-Jc-eEp" secondAttribute="trailing" constant="15" id="Kaf-or-2jE"/>
                                                 <constraint firstAttribute="trailing" secondItem="vfK-zk-l1l" secondAttribute="trailing" constant="20" id="P8K-cf-Sd4"/>
+                                                <constraint firstItem="vfK-zk-l1l" firstAttribute="leading" secondItem="Ogt-yk-Jlf" secondAttribute="trailing" constant="15" id="PJv-T3-uOD"/>
                                                 <constraint firstAttribute="bottom" secondItem="B12-jF-Z8J" secondAttribute="bottom" id="Sii-YL-0gj"/>
-                                                <constraint firstItem="RSO-Jc-eEp" firstAttribute="centerY" secondItem="FN7-WM-WdG" secondAttribute="centerY" id="aBx-cC-BTd"/>
                                                 <constraint firstAttribute="trailing" secondItem="B12-jF-Z8J" secondAttribute="trailing" id="f7T-ow-Vtj"/>
-                                                <constraint firstItem="RSO-Jc-eEp" firstAttribute="leading" secondItem="FN7-WM-WdG" secondAttribute="leading" constant="25" id="hC0-Fh-xA6"/>
                                                 <constraint firstItem="B12-jF-Z8J" firstAttribute="leading" secondItem="FN7-WM-WdG" secondAttribute="leading" id="lmx-Tw-McZ"/>
                                                 <constraint firstItem="vfK-zk-l1l" firstAttribute="centerY" secondItem="FN7-WM-WdG" secondAttribute="centerY" id="wij-Bd-Ed8"/>
                                             </constraints>
@@ -101,7 +97,7 @@
                                         <connections>
                                             <outlet property="businessNameLabel" destination="ORT-2h-iEz" id="kDH-8i-CNz"/>
                                             <outlet property="headerBackgroundImageView" destination="B12-jF-Z8J" id="WHh-3M-Aq6"/>
-                                            <outlet property="headerImageView" destination="RSO-Jc-eEp" id="Qib-6b-Imm"/>
+                                            <outlet property="headerImageView" destination="Ogt-yk-Jlf" id="d4D-o8-mkl"/>
                                             <outlet property="phoneLabel" destination="wch-2d-yCE" id="28m-Yr-6hj"/>
                                         </connections>
                                     </tableViewCell>

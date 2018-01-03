@@ -49,20 +49,23 @@
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C3Q-mQ-Rcw">
                                                         <rect key="frame" x="0.0" y="0.0" width="90" height="44"/>
-                                                        <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="31" maxY="0.0"/>
-                                                        <inset key="imageEdgeInsets" minX="60" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                                        <state key="normal" title="南昌" image="app_turn_down">
+                                                        <state key="normal" title="南昌">
                                                             <color key="titleColor" red="0.94901960780000005" green="0.094117647060000004" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
                                                         </state>
                                                         <connections>
                                                             <action selector="locationAction:" destination="1zU-Bv-0XT" eventType="touchUpInside" id="rki-qR-1fW"/>
                                                         </connections>
                                                     </button>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app_turn_down" translatesAutoresizingMaskIntoConstraints="NO" id="nsE-hL-rpX">
+                                                        <rect key="frame" x="75" y="19" width="11" height="6"/>
+                                                    </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" red="0.078431372550000003" green="0.078431372550000003" blue="0.1019607843" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="90" id="Ffl-Gq-o0f"/>
                                                     <constraint firstItem="C3Q-mQ-Rcw" firstAttribute="top" secondItem="ooY-7o-Bnb" secondAttribute="top" id="OeK-Qh-5Bw"/>
+                                                    <constraint firstAttribute="trailing" secondItem="nsE-hL-rpX" secondAttribute="trailing" constant="4" id="UGP-33-atn"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="WTa-Ru-r7G"/>
+                                                    <constraint firstItem="nsE-hL-rpX" firstAttribute="centerY" secondItem="ooY-7o-Bnb" secondAttribute="centerY" id="XWx-ad-MxO"/>
                                                     <constraint firstAttribute="trailing" secondItem="C3Q-mQ-Rcw" secondAttribute="trailing" id="hfe-JQ-cpt"/>
                                                     <constraint firstAttribute="bottom" secondItem="C3Q-mQ-Rcw" secondAttribute="bottom" id="rXy-Se-tmp"/>
                                                     <constraint firstItem="C3Q-mQ-Rcw" firstAttribute="leading" secondItem="ooY-7o-Bnb" secondAttribute="leading" id="wOk-EY-SSe"/>
