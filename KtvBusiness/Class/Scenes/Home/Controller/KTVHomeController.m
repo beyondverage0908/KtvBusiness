@@ -308,7 +308,7 @@
         //修改label显示内容
         if (regeocode) {
 //            [weakSelf.locationBtn setText:[NSString stringWithFormat:@"%@ \n %@-%@-%.2fm", regeocode.formattedAddress,regeocode.citycode, regeocode.adcode, location.horizontalAccuracy]];
-            [weakSelf.locationBtn setTitle:[NSString stringWithFormat:@"%@", regeocode.city] forState:UIControlStateNormal];
+            [weakSelf.locationBtn setTitle:[NSString stringWithFormat:@"%@", regeocode.city] forState:UIControlStateNormal]; 
         } else {
             NSString *latitude = @(location.coordinate.latitude).stringValue;
             NSString *longitude = @(location.coordinate.longitude).stringValue;
