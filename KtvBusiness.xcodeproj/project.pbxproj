@@ -77,7 +77,15 @@
 		334EFEDC1FEFB48F003B34C5 /* KTVPackage.m in Sources */ = {isa = PBXBuildFile; fileRef = 334EFECD1FEFB48F003B34C5 /* KTVPackage.m */; };
 		334EFEDD1FEFB48F003B34C5 /* KTVUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 334EFECE1FEFB48F003B34C5 /* KTVUser.m */; };
 		334EFEDE1FEFB48F003B34C5 /* KTVVideo.m in Sources */ = {isa = PBXBuildFile; fileRef = 334EFED01FEFB48F003B34C5 /* KTVVideo.m */; };
+		335DCE4520B974E300E390B1 /* province_data.json in Resources */ = {isa = PBXBuildFile; fileRef = 335DCE3E20B974E300E390B1 /* province_data.json */; };
+		335DCE4620B974E300E390B1 /* JHPickView.m in Sources */ = {isa = PBXBuildFile; fileRef = 335DCE3F20B974E300E390B1 /* JHPickView.m */; };
+		335DCE4720B974E300E390B1 /* MySingleton.m in Sources */ = {isa = PBXBuildFile; fileRef = 335DCE4120B974E300E390B1 /* MySingleton.m */; };
+		335DCE4820B974E300E390B1 /* CityModelData.m in Sources */ = {isa = PBXBuildFile; fileRef = 335DCE4320B974E300E390B1 /* CityModelData.m */; };
+		3383ACC0204BCD2700468E59 /* libBPush.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3383ACBD204BCD2700468E59 /* libBPush.a */; };
+		3383ACC1204BCD2700468E59 /* BPushCerResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3383ACBE204BCD2700468E59 /* BPushCerResource.bundle */; };
+		3383ACC2204BCD2700468E59 /* test.caf in Resources */ = {isa = PBXBuildFile; fileRef = 3383ACBF204BCD2700468E59 /* test.caf */; };
 		33C7C1BC1FF297BF00845CA6 /* KTVOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C7C1BB1FF297BF00845CA6 /* KTVOrder.m */; };
+		33E91BBD204A97C0001ED01E /* KTVMyMoneyPacageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33E91BBC204A97C0001ED01E /* KTVMyMoneyPacageController.m */; };
 		33ED61641FF37CAD00C9813C /* Prj_tip.md in Resources */ = {isa = PBXBuildFile; fileRef = 33ED61631FF37CAD00C9813C /* Prj_tip.md */; };
 		33F371CD1FE50F4A00799C66 /* KTVMineHeadCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F371CC1FE50F4A00799C66 /* KTVMineHeadCell.m */; };
 		33F371D01FE50F8300799C66 /* KTVMineOptionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 33F371CF1FE50F8300799C66 /* KTVMineOptionCell.m */; };
@@ -241,8 +249,22 @@
 		334EFECF1FEFB48F003B34C5 /* KTVUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTVUser.h; sourceTree = "<group>"; };
 		334EFED01FEFB48F003B34C5 /* KTVVideo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KTVVideo.m; sourceTree = "<group>"; };
 		334EFED11FEFB48F003B34C5 /* KTVBanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KTVBanner.h; sourceTree = "<group>"; };
+		335DCE3E20B974E300E390B1 /* province_data.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = province_data.json; sourceTree = "<group>"; };
+		335DCE3F20B974E300E390B1 /* JHPickView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JHPickView.m; sourceTree = "<group>"; };
+		335DCE4020B974E300E390B1 /* CityModelData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CityModelData.h; sourceTree = "<group>"; };
+		335DCE4120B974E300E390B1 /* MySingleton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MySingleton.m; sourceTree = "<group>"; };
+		335DCE4220B974E300E390B1 /* JHPickView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JHPickView.h; sourceTree = "<group>"; };
+		335DCE4320B974E300E390B1 /* CityModelData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CityModelData.m; sourceTree = "<group>"; };
+		335DCE4420B974E300E390B1 /* MySingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MySingleton.h; sourceTree = "<group>"; };
+		3383ACBC204BCD2700468E59 /* BPush.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BPush.h; sourceTree = "<group>"; };
+		3383ACBD204BCD2700468E59 /* libBPush.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libBPush.a; sourceTree = "<group>"; };
+		3383ACBE204BCD2700468E59 /* BPushCerResource.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = BPushCerResource.bundle; sourceTree = "<group>"; };
+		3383ACBF204BCD2700468E59 /* test.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = test.caf; sourceTree = "<group>"; };
+		3383ACC3204BDA5800468E59 /* KtvBusiness.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = KtvBusiness.entitlements; sourceTree = "<group>"; };
 		33C7C1BA1FF297BF00845CA6 /* KTVOrder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTVOrder.h; sourceTree = "<group>"; };
 		33C7C1BB1FF297BF00845CA6 /* KTVOrder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTVOrder.m; sourceTree = "<group>"; };
+		33E91BBB204A97C0001ED01E /* KTVMyMoneyPacageController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTVMyMoneyPacageController.h; sourceTree = "<group>"; };
+		33E91BBC204A97C0001ED01E /* KTVMyMoneyPacageController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTVMyMoneyPacageController.m; sourceTree = "<group>"; };
 		33ED61631FF37CAD00C9813C /* Prj_tip.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = Prj_tip.md; sourceTree = "<group>"; };
 		33F371CB1FE50F4A00799C66 /* KTVMineHeadCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KTVMineHeadCell.h; sourceTree = "<group>"; };
 		33F371CC1FE50F4A00799C66 /* KTVMineHeadCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KTVMineHeadCell.m; sourceTree = "<group>"; };
@@ -261,6 +283,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3383ACC0204BCD2700468E59 /* libBPush.a in Frameworks */,
 				D0BF6BD695C10CBF62CFFEBD /* libPods-KtvBusiness.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -307,6 +330,7 @@
 		333035061FDBBBAE001B47D7 /* KtvBusiness */ = {
 			isa = PBXGroup;
 			children = (
+				3383ACC3204BDA5800468E59 /* KtvBusiness.entitlements */,
 				3330353F1FDBC77D001B47D7 /* App */,
 				3330353E1FDBC77D001B47D7 /* Class */,
 				3330353B1FDBC77D001B47D7 /* Resources */,
@@ -448,6 +472,8 @@
 		333035521FDBC980001B47D7 /* ThirdParty */ = {
 			isa = PBXGroup;
 			children = (
+				335DCE3D20B974E300E390B1 /* JHPickView */,
+				3383ACBA204BCD2600468E59 /* BPush */,
 				3330695C1FF544EA00A6ECEE /* PageControl */,
 				3330694D1FF542C100A6ECEE /* SDCycleScrollView */,
 			);
@@ -646,6 +672,8 @@
 				334EFE891FEF8439003B34C5 /* KTVSettingController.m */,
 				334EFE8E1FEFA7FF003B34C5 /* KTVLoginGuideController.h */,
 				334EFE8F1FEFA7FF003B34C5 /* KTVLoginGuideController.m */,
+				33E91BBB204A97C0001ED01E /* KTVMyMoneyPacageController.h */,
+				33E91BBC204A97C0001ED01E /* KTVMyMoneyPacageController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -845,6 +873,39 @@
 			path = PageControl;
 			sourceTree = "<group>";
 		};
+		335DCE3D20B974E300E390B1 /* JHPickView */ = {
+			isa = PBXGroup;
+			children = (
+				335DCE3E20B974E300E390B1 /* province_data.json */,
+				335DCE3F20B974E300E390B1 /* JHPickView.m */,
+				335DCE4020B974E300E390B1 /* CityModelData.h */,
+				335DCE4120B974E300E390B1 /* MySingleton.m */,
+				335DCE4220B974E300E390B1 /* JHPickView.h */,
+				335DCE4320B974E300E390B1 /* CityModelData.m */,
+				335DCE4420B974E300E390B1 /* MySingleton.h */,
+			);
+			path = JHPickView;
+			sourceTree = "<group>";
+		};
+		3383ACBA204BCD2600468E59 /* BPush */ = {
+			isa = PBXGroup;
+			children = (
+				3383ACBB204BCD2700468E59 /* normalversion */,
+			);
+			path = BPush;
+			sourceTree = "<group>";
+		};
+		3383ACBB204BCD2700468E59 /* normalversion */ = {
+			isa = PBXGroup;
+			children = (
+				3383ACBC204BCD2700468E59 /* BPush.h */,
+				3383ACBD204BCD2700468E59 /* libBPush.a */,
+				3383ACBE204BCD2700468E59 /* BPushCerResource.bundle */,
+				3383ACBF204BCD2700468E59 /* test.caf */,
+			);
+			path = normalversion;
+			sourceTree = "<group>";
+		};
 		8E2EE5CA3CD691D91EA9E5A7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -940,6 +1001,9 @@
 							com.apple.Maps.iOS = {
 								enabled = 0;
 							};
+							com.apple.Push = {
+								enabled = 1;
+							};
 						};
 					};
 					3330351B1FDBBBAE001B47D7 = {
@@ -984,8 +1048,11 @@
 				33ED61641FF37CAD00C9813C /* Prj_tip.md in Resources */,
 				333035141FDBBBAE001B47D7 /* LaunchScreen.storyboard in Resources */,
 				3330358D1FDBCFE1001B47D7 /* Info.storyboard in Resources */,
+				335DCE4520B974E300E390B1 /* province_data.json in Resources */,
 				333035891FDBCF6B001B47D7 /* Home.storyboard in Resources */,
 				333035111FDBBBAE001B47D7 /* Assets.xcassets in Resources */,
+				3383ACC1204BCD2700468E59 /* BPushCerResource.bundle in Resources */,
+				3383ACC2204BCD2700468E59 /* test.caf in Resources */,
 				3330354A1FDBC809001B47D7 /* Info.plist in Resources */,
 				3330350F1FDBBBAE001B47D7 /* Main.storyboard in Resources */,
 				3330358B1FDBCFB5001B47D7 /* Hall.storyboard in Resources */,
@@ -1078,8 +1145,10 @@
 				334EFE8A1FEF8439003B34C5 /* KTVSettingController.m in Sources */,
 				3330357A1FDBCA3A001B47D7 /* UIViewController+StoryboardHelper.m in Sources */,
 				333069561FF542C200A6ECEE /* SDCycleScrollView.m in Sources */,
+				335DCE4620B974E300E390B1 /* JHPickView.m in Sources */,
 				333035AD1FDBD8F4001B47D7 /* KTVHallController.m in Sources */,
 				333035821FDBCA3A001B47D7 /* UILabel+Ktv.m in Sources */,
+				335DCE4720B974E300E390B1 /* MySingleton.m in Sources */,
 				333069671FF544EA00A6ECEE /* TAAnimatedDotView.m in Sources */,
 				333035BC1FDBE6DA001B47D7 /* KTVAlertController.m in Sources */,
 				334EFED31FEFB48F003B34C5 /* KTVGroupbuy.m in Sources */,
@@ -1093,8 +1162,10 @@
 				331A49E81FDFAF3900E119B8 /* KTVBusinessActivityView.m in Sources */,
 				334EFE901FEFA7FF003B34C5 /* KTVLoginGuideController.m in Sources */,
 				334EFEDC1FEFB48F003B34C5 /* KTVPackage.m in Sources */,
+				33E91BBD204A97C0001ED01E /* KTVMyMoneyPacageController.m in Sources */,
 				333069681FF544EA00A6ECEE /* TAAbstractDotView.m in Sources */,
 				33389C0F1FDD309C0091BA7C /* KTVTableHeaderView.m in Sources */,
+				335DCE4820B974E300E390B1 /* CityModelData.m in Sources */,
 				334EFED81FEFB48F003B34C5 /* KTVStore.m in Sources */,
 				333035781FDBCA3A001B47D7 /* MBProgressHUD+KTV.m in Sources */,
 				3330357C1FDBCA3A001B47D7 /* UIView+extension.m in Sources */,
@@ -1289,12 +1360,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = KtvBusiness/KtvBusiness.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HFH9E69Y5K;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/KtvBusiness/Class/Common/KTVPrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/KtvBusiness/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/KtvBusiness/Class/ThirdParty/BPush/normalversion",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ktv.bar.business;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -1307,12 +1383,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_ENTITLEMENTS = KtvBusiness/KtvBusiness.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HFH9E69Y5K;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/KtvBusiness/Class/Common/KTVPrefixHeader.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/KtvBusiness/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/KtvBusiness/Class/ThirdParty/BPush/normalversion",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.ktv.bar.business;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;

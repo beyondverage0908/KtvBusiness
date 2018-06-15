@@ -286,4 +286,16 @@
     return @"/api/version";
 }
 
+#pragma mark - 账户余额
+
++ (NSString *)getAccountBalanceUrl {
+    return @"/api/login//user/getMoney/";
+}
+
+#pragma mark - 百度推送，上传channelid
+
++ (NSString *)getUpdateBPushChannelIdUrl {
+    return @"/api/push/updateChannelId";
+}
+
 @end

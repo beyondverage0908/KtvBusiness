@@ -39,5 +39,8 @@
 + (NSString *)orderDescriptionType:(NSInteger)type;
 // orderStatus 99:全部 -1:未支付，0,已支付, 1未响应，2未使用，3被商家忽略，4已响应，5待评论，，6已取消，7已结束
 + (NSString *)orderStatusDescriptin:(NSInteger)orderStatus;
+/// 保存channel id
++ (void)saveChannelId:(NSString *)channelId;
++ (NSString *)channelId;
 
 @end

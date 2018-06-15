@@ -49,11 +49,18 @@
     [confirmPublishBtn setTitle:@"确认发布" forState:UIControlStateNormal];
     confirmPublishBtn.backgroundColor = [UIColor ktvRed];
     confirmPublishBtn.layer.cornerRadius = 8;
+    [confirmPublishBtn addTarget:self action:@selector(publishActivityAction:) forControlEvents:UIControlEventTouchUpInside];
     [confirmPublishBtn mas_makeConstraints:^(MASConstraintMaker *make) {
         make.center.equalTo(activityBgView);
         make.width.equalTo(activityBgView).multipliedBy(0.8);
         make.height.mas_equalTo(@40);
     }];
+}
+
+#pragma mark - 事件
+
+- (void)publishActivityAction:(UIButton *)btn {
+    NSLog(@"发布活动");
 }
 
 @end

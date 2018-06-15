@@ -214,4 +214,12 @@
 /// 获取最新的版本号
 + (NSString *)getAppVersionUrl;
 
+#pragma mark - 账户余额
+/// 账户余额
++ (NSString *)getAccountBalanceUrl;
+
+#pragma mark - 百度推送，上传channelid
+
++ (NSString *)getUpdateBPushChannelIdUrl;
+
 @end

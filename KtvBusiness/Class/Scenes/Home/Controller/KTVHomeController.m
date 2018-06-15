@@ -16,8 +16,9 @@
 #import "KTVBanner.h"
 #import "MJRefresh.h"
 #import <AMapLocationKit/AMapLocationKit.h>
+#import "JHPickView.h"
 
-@interface KTVHomeController ()<UITableViewDelegate, UITableViewDataSource, SDCycleScrollViewDelegate, AMapLocationManagerDelegate>
+@interface KTVHomeController ()<UITableViewDelegate, UITableViewDataSource, SDCycleScrollViewDelegate, AMapLocationManagerDelegate, JHPickerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIButton *locationBtn;
 @property (weak, nonatomic) IBOutlet UIButton *scanBtn;
@@ -50,6 +51,7 @@
     
     [self loadNewMatchOrder];
     [self loadUserInfo];
+    [self updateBPushChannelId];
     
     // 初始化你地理编码回调
     [self initReGecodeLocationCompleteBlock];
@@ -70,6 +72,8 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }
+
+
 
 #pragma mark - 刷新设置
 
@@ -131,11 +135,26 @@
     }];
 }
 
+- (void)updateBPushChannelId {
+    NSString *channelId = [KTVCommon channelId];
+    NSString *username = [KTVCommon userInfo].phone;
+    // phonetype 3 安卓手机 4 苹果手机
+    // channelId  需要前端传过来
+    if (username.length && channelId.length) {
+        NSDictionary *params = @{@"username" : username, @"channelId" : channelId, @"phoneType" : @4};
+        [KTVMainSvc postUpdateBPushChannel:params result:^(NSDictionary *result) {}];
+    }
+}
+
 #pragma mark - 事件
 
 - (IBAction)locationAction:(UIButton *)sender {
     CLog(@"首页地理位置");
-    [self startReGeocode];
+    UIWindow *keyWindow = [UIApplication sharedApplication].keyWindow;
+    JHPickView *locationPickView = [[JHPickView alloc] initWithFrame:keyWindow.bounds];
+    locationPickView.delegate = self;
+    locationPickView.arrayType = AreaArray;
+    [keyWindow addSubview:locationPickView];
 }
 
 - (IBAction)scanQR:(UIButton *)sender {
@@ -315,6 +334,13 @@
 //            [weakSelf.displayLabel setText:[NSString stringWithFormat:@"lat:%f;lon:%f \n accuracy:%.2fm", location.coordinate.latitude, location.coordinate.longitude, location.horizontalAccuracy]];
         }
     };
+}
+
+#pragma mark - PickerSelectorIndixString
+
+- (void)PickerSelectorIndixString:(NSString *)str {
+    NSArray *citys = [str componentsSeparatedByString:@" "];
+    [self.locationBtn setTitle:citys[citys.count - 1] forState:UIControlStateNormal];
 }
 
 @end

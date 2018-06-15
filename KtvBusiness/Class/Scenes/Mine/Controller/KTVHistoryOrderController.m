@@ -69,7 +69,9 @@
     //username = @"18939865729";
     NSDictionary *params = @{@"username" : username, @"orderStatus" : ostatu};
     
+    [MBProgressHUD showMessage:@"订单查询中..."];
     [KTVMainSvc postSearchOrderParams:params result:^(NSDictionary *result) {
+        [MBProgressHUD hiddenHUD];
         [self.tableview.mj_header endRefreshing];
         
         if ([result[@"code"] isEqualToString:ktvCodeSuccess]) {

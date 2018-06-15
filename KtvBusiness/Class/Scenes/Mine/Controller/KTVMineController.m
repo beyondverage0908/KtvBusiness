@@ -12,6 +12,7 @@
 #import "KTVAboutAppController.h"
 #import "KTVHistoryOrderController.h"
 #import "KTVSettingController.h"
+#import "KTVMyMoneyPacageController.h"
 #import "KTVStore.h"
 
 @interface KTVMineController ()<UITableViewDelegate, UITableViewDataSource>
@@ -43,7 +44,7 @@
 }
 
 - (void)initData {
-    _cellTitleList = [NSMutableArray arrayWithObjects:@"历史订单",@"设置", @"关于", nil];
+    _cellTitleList = [NSMutableArray arrayWithObjects:@"我的钱包",@"历史订单",@"设置", @"关于", nil];
 }
 
 #pragma mark - 网络
@@ -71,7 +72,7 @@
     if (section == 0) {
         return 1;
     } else if (section == 1) {
-        return 3;
+        return _cellTitleList.count;
     }
     return 0;
 }
@@ -88,12 +89,15 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 1) {
         if (indexPath.row == 0) {
-            KTVHistoryOrderController *vc = (KTVHistoryOrderController *)[UIViewController storyboardName:@"Mine" storyboardId:@"KTVHistoryOrderController"];
+            KTVMyMoneyPacageController *vc = (KTVMyMoneyPacageController *)[UIViewController storyboardName:@"Mine" storyboardId:@"KTVMyMoneyPacageController"];
             [self.navigationController pushViewController:vc animated:YES];
         } else if (indexPath.row == 1) {
-            KTVSettingController *vc = [UIViewController storyboardName:@"Mine" storyboardId:@"KTVSettingController"];
+            KTVHistoryOrderController *vc = (KTVHistoryOrderController *)[UIViewController storyboardName:@"Mine" storyboardId:@"KTVHistoryOrderController"];
             [self.navigationController pushViewController:vc animated:YES];
         } else if (indexPath.row == 2) {
+            KTVSettingController *vc = [UIViewController storyboardName:@"Mine" storyboardId:@"KTVSettingController"];
+            [self.navigationController pushViewController:vc animated:YES];
+        } else if (indexPath.row == 3) {
             KTVAboutAppController *vc = (KTVAboutAppController *)[UIViewController storyboardName:@"Mine" storyboardId:@"KTVAboutAppController"];
             [self.navigationController pushViewController:vc animated:YES];
         }

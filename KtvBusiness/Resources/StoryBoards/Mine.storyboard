@@ -479,6 +479,45 @@
             </objects>
             <point key="canvasLocation" x="2825" y="72"/>
         </scene>
+        <!--钱包余额-->
+        <scene sceneID="6R2-2h-GaV">
+            <objects>
+                <viewController storyboardIdentifier="KTVMyMoneyPacageController" title="钱包余额" id="adM-CC-4iX" customClass="KTVMyMoneyPacageController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xzi-PM-Uad">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="余额:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b2D-mN-rdD">
+                                <rect key="frame" x="15" y="89" width="40" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0元" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gaa-pD-59H">
+                                <rect key="frame" x="313.5" y="89" width="41.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.94901960780000005" green="0.094117647060000004" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.1019607843" green="0.090196078430000007" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="b2D-mN-rdD" firstAttribute="leading" secondItem="oYL-65-SkA" secondAttribute="leading" constant="15" id="ICD-Nr-4db"/>
+                            <constraint firstItem="gaa-pD-59H" firstAttribute="top" secondItem="oYL-65-SkA" secondAttribute="top" constant="25" id="PRA-dD-ymJ"/>
+                            <constraint firstItem="oYL-65-SkA" firstAttribute="trailing" secondItem="gaa-pD-59H" secondAttribute="trailing" constant="20" id="h2P-Xx-x1V"/>
+                            <constraint firstItem="b2D-mN-rdD" firstAttribute="top" secondItem="oYL-65-SkA" secondAttribute="top" constant="25" id="mx2-Bk-49E"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="oYL-65-SkA"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="balanceLabel" destination="gaa-pD-59H" id="mtD-ac-Y0Z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YDW-Ad-2jb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3487" y="70"/>
+        </scene>
         <!--Login Controller-->
         <scene sceneID="DZF-pl-QuN">
             <objects>

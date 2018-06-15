@@ -8,6 +8,8 @@
 
 #import "KTVHallController.h"
 #import "KTVOrderCell.h"
+#import "MJRefresh.h"
+#import "JHPickView.h"
 
 @interface KTVHallController ()<UITableViewDelegate, UITableViewDataSource>
 
@@ -17,6 +19,7 @@
 @property (strong, nonatomic) NSMutableArray *pendingDealList; // 待处理
 @property (strong, nonatomic) NSMutableArray *dealList;  // 已响应
 @property (assign, nonatomic) NSInteger requestType; // 0 待处理 1 已响应
+@property (assign, nonatomic) NSInteger currentOrderStatus;
 
 @end
 
@@ -34,12 +37,30 @@
     safetyArray(self.pendingDealList);
     safetyArray(self.dealList);
     
+    self.currentOrderStatus = 1;
+    
     // 默认请求待处理
-    [self requestByOrderStatu:1];
+    [self requestByOrderStatu:self.currentOrderStatus];
+    
+    [self setupRefresh];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
+}
+
+- (void)setupRefresh
+{
+    weakify(self);
+    MJRefreshNormalHeader *header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        [weakself requestByOrderStatu:self.currentOrderStatus];
+    }];;
+    header.lastUpdatedTimeLabel.hidden = NO;
+    header.labelLeftInset = 30;
+    [header setTitle:@"获取订单" forState:MJRefreshStatePulling];
+    [header setTitle:@"获取订单中..." forState:MJRefreshStateRefreshing];
+    [header setTitle:@"下拉刷新订单" forState:MJRefreshStateIdle];
+    self.tableview.mj_header = header;
 }
 
 #pragma mark - 网络
@@ -52,7 +73,10 @@
     //username = @"18939865729";
     NSDictionary *params = @{@"username" : username, @"orderStatus" : ostatu};
     
+    [MBProgressHUD showMessage:@"订单查询中..."];
     [KTVMainSvc postSearchOrderParams:params result:^(NSDictionary *result) {
+        [self.tableview.mj_header endRefreshing];
+        [MBProgressHUD hiddenHUD];
         if ([result[@"code"] isEqualToString:ktvCodeSuccess]) {
             if ([result[@"data"] count] > 0) {
                 if (self.requestType == 0) {
@@ -117,14 +141,16 @@
         {
             self.requestType = 0;
             // 待处理
-            [self requestByOrderStatu:1];
+            self.currentOrderStatus = 1;
+            [self requestByOrderStatu:self.currentOrderStatus];
         }
             break;
         case 1:
         {
             self.requestType = 1;
             // 已响应
-            [self requestByOrderStatu:4];
+            self.currentOrderStatus = 4;
+            [self requestByOrderStatu:self.currentOrderStatus];
         }
             break;
         default:

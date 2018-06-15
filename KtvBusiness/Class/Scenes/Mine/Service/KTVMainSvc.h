@@ -31,4 +31,10 @@ typedef void(^ResponseSuccess)(NSDictionary *result);
 /// 根据账号，获取商家信息，
 + (void)getQueryStore:(NSString *)phone result:(ResponseSuccess)responseResult;
 
+/// 获取账户余额
++ (void)getAccountBalance:(NSString *)phone result:(ResponseSuccess)responseResult;
+
+/// 更新用户channelid
++ (void)postUpdateBPushChannel:(NSDictionary *)params result:(ResponseSuccess)responseResult;
+
 @end
