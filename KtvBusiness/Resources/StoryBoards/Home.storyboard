@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mEv-k8-fNr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="mEv-k8-fNr">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -71,33 +71,8 @@
                                                     <constraint firstItem="C3Q-mQ-Rcw" firstAttribute="leading" secondItem="ooY-7o-Bnb" secondAttribute="leading" id="wOk-EY-SSe"/>
                                                 </constraints>
                                             </view>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yaQ-iy-1TP">
-                                                <rect key="frame" x="285" y="0.0" width="90" height="44"/>
-                                                <subviews>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EkK-GG-wnn">
-                                                        <rect key="frame" x="0.0" y="0.0" width="90" height="44"/>
-                                                        <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="-1" maxY="0.0"/>
-                                                        <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="15" maxY="0.0"/>
-                                                        <state key="normal" title="扫码" image="app_scan">
-                                                            <color key="titleColor" red="0.94901960780000005" green="0.094117647060000004" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
-                                                        </state>
-                                                        <connections>
-                                                            <action selector="scanQR:" destination="1zU-Bv-0XT" eventType="touchUpInside" id="qjw-BI-QqV"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                                <color key="backgroundColor" red="0.078431372550000003" green="0.078431372550000003" blue="0.1019607843" alpha="1" colorSpace="calibratedRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="bottom" secondItem="EkK-GG-wnn" secondAttribute="bottom" id="3xf-bn-gJS"/>
-                                                    <constraint firstItem="EkK-GG-wnn" firstAttribute="leading" secondItem="yaQ-iy-1TP" secondAttribute="leading" id="Azk-hk-yol"/>
-                                                    <constraint firstAttribute="trailing" secondItem="EkK-GG-wnn" secondAttribute="trailing" id="hVb-tH-tz0"/>
-                                                    <constraint firstItem="EkK-GG-wnn" firstAttribute="top" secondItem="yaQ-iy-1TP" secondAttribute="top" id="oLY-fd-pQH"/>
-                                                    <constraint firstAttribute="width" constant="90" id="sO7-7O-GUx"/>
-                                                </constraints>
-                                            </view>
                                             <searchBar contentMode="redraw" placeholder="南昌五月花" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dma-4G-NLl">
-                                                <rect key="frame" x="90" y="0.0" width="195" height="44"/>
+                                                <rect key="frame" x="90" y="0.0" width="285" height="44"/>
                                                 <color key="backgroundColor" red="0.078431372550000003" green="0.078431372550000003" blue="0.1019607843" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="barTintColor" red="0.078431372550000003" green="0.078431372550000003" blue="0.1019607843" alpha="1" colorSpace="calibratedRGB"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -105,16 +80,13 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstItem="yaQ-iy-1TP" firstAttribute="top" secondItem="uPC-gX-dWh" secondAttribute="top" id="6bC-hi-5SD"/>
-                                            <constraint firstItem="yaQ-iy-1TP" firstAttribute="leading" secondItem="Dma-4G-NLl" secondAttribute="trailing" id="Ilu-Bf-V4H"/>
                                             <constraint firstItem="ooY-7o-Bnb" firstAttribute="top" secondItem="uPC-gX-dWh" secondAttribute="top" id="K5z-oo-HH1"/>
                                             <constraint firstAttribute="bottom" secondItem="ooY-7o-Bnb" secondAttribute="bottom" id="NvL-Ei-lVE"/>
                                             <constraint firstItem="Dma-4G-NLl" firstAttribute="leading" secondItem="ooY-7o-Bnb" secondAttribute="trailing" id="OHS-iM-zOF"/>
                                             <constraint firstItem="Dma-4G-NLl" firstAttribute="top" secondItem="uPC-gX-dWh" secondAttribute="top" id="VwD-ZM-nsT"/>
-                                            <constraint firstAttribute="bottom" secondItem="yaQ-iy-1TP" secondAttribute="bottom" id="cLa-PY-0iZ"/>
                                             <constraint firstAttribute="height" constant="44" id="t0m-5f-a4u"/>
+                                            <constraint firstAttribute="trailing" secondItem="Dma-4G-NLl" secondAttribute="trailing" id="u4U-Ku-2PW"/>
                                             <constraint firstAttribute="bottom" secondItem="Dma-4G-NLl" secondAttribute="bottom" id="vqO-Ij-4f1"/>
-                                            <constraint firstAttribute="trailing" secondItem="yaQ-iy-1TP" secondAttribute="trailing" id="wPd-Wr-VT0"/>
                                             <constraint firstItem="ooY-7o-Bnb" firstAttribute="leading" secondItem="uPC-gX-dWh" secondAttribute="leading" id="xd8-FK-yVr"/>
                                         </constraints>
                                     </view>
@@ -220,11 +192,11 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="62r-Kb-dEM">
-                                                            <rect key="frame" x="210" y="165" width="65" height="35"/>
+                                                            <rect key="frame" x="210" y="175" width="65" height="25"/>
                                                             <color key="backgroundColor" red="0.94901960780000005" green="0.094117647060000004" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="65" id="Egr-Qe-vzi"/>
-                                                                <constraint firstAttribute="height" constant="35" id="Vnk-Dr-1FC"/>
+                                                                <constraint firstAttribute="height" constant="25" id="Vnk-Dr-1FC"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                             <state key="normal" title="响应订单">
@@ -235,11 +207,11 @@
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5cr-Ki-iBq">
-                                                            <rect key="frame" x="295" y="165" width="65" height="35"/>
+                                                            <rect key="frame" x="295" y="175" width="65" height="25"/>
                                                             <color key="backgroundColor" red="0.98039215686274506" green="0.56862745098039214" blue="0.10196078431372549" alpha="1" colorSpace="calibratedRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="65" id="GBk-AE-4CU"/>
-                                                                <constraint firstAttribute="height" constant="35" id="cOa-oY-4w2"/>
+                                                                <constraint firstAttribute="height" constant="25" id="cOa-oY-4w2"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                             <state key="normal" title="忽略订单">
@@ -256,8 +228,11 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e4n-Qf-KmL">
-                                                            <rect key="frame" x="286" y="76" width="74" height="30"/>
+                                                            <rect key="frame" x="286" y="78.5" width="74" height="25"/>
                                                             <color key="backgroundColor" red="0.94901960780000005" green="0.094117647060000004" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="25" id="bjP-0q-vMh"/>
+                                                            </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                             <inset key="contentEdgeInsets" minX="10" minY="7" maxX="10" maxY="7"/>
                                                             <state key="normal" title="确认消费">
@@ -365,7 +340,6 @@
                     <connections>
                         <outlet property="homeSearchBar" destination="Dma-4G-NLl" id="0hf-O0-rwp"/>
                         <outlet property="locationBtn" destination="C3Q-mQ-Rcw" id="rXU-N9-FxZ"/>
-                        <outlet property="scanBtn" destination="EkK-GG-wnn" id="4MK-ZF-uGD"/>
                         <outlet property="tableview" destination="YHR-7P-DlW" id="SvU-fK-lHd"/>
                     </connections>
                 </viewController>
@@ -375,7 +349,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="app_scan" width="20" height="20"/>
         <image name="app_turn_down" width="11" height="6"/>
         <image name="mainpage_all_bg_line" width="375" height="200"/>
     </resources>

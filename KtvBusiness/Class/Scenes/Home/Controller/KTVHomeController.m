@@ -17,8 +17,9 @@
 #import "MJRefresh.h"
 #import <AMapLocationKit/AMapLocationKit.h>
 #import "JHPickView.h"
+#import "KSPhotoBrowser.h"
 
-@interface KTVHomeController ()<UITableViewDelegate, UITableViewDataSource, SDCycleScrollViewDelegate, AMapLocationManagerDelegate, JHPickerDelegate>
+@interface KTVHomeController ()<UITableViewDelegate, UITableViewDataSource, SDCycleScrollViewDelegate, AMapLocationManagerDelegate, JHPickerDelegate, UIScrollViewDelegate, KSPhotoBrowserDelegate, UISearchBarDelegate>
 
 @property (weak, nonatomic) IBOutlet UIButton *locationBtn;
 @property (weak, nonatomic) IBOutlet UIButton *scanBtn;
@@ -46,12 +47,15 @@
     self.tableview.dataSource = self;
     [self setupRefresh];
     
+    self.homeSearchBar.delegate = self;
+    
     safetyArray(self.matchOrderList);
     safetyArray(self.bannerList);
     
     [self loadNewMatchOrder];
     [self loadUserInfo];
     [self updateBPushChannelId];
+    [self loadMianBanner];
     
     // 初始化你地理编码回调
     [self initReGecodeLocationCompleteBlock];
@@ -99,6 +103,18 @@
 
 #pragma mark - 网络
 
+- (void)loadMianBanner {
+    [KTVMainSvc getMainBanner:nil result:^(NSDictionary *result) {
+        if ([result[@"code"] isEqualToString:ktvCodeSuccess]) {
+            for (NSDictionary *dic in result[@"data"]) {
+                KTVBanner *banner = [KTVBanner yy_modelWithDictionary:dic];
+                [self.bannerList addObject:banner];
+            }
+            [self.tableview reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:UITableViewRowAnimationNone];
+        }
+    }];
+}
+
 // 系统匹配的未响应的订单
 - (void)loadNewMatchOrder {
     // orderStatus 99:全部 -1:未支付，0,已支付, 1未响应，2未使用，3被商家忽略，4已响应，5待评论，，6已取消，7已结束
@@ -144,6 +160,19 @@
         NSDictionary *params = @{@"username" : username, @"channelId" : channelId, @"phoneType" : @4};
         [KTVMainSvc postUpdateBPushChannel:params result:^(NSDictionary *result) {}];
     }
+}
+
+- (void)changeOrderStatus:(NSDictionary *)params successToast:(NSString *)toast {
+    [MBProgressHUD showMessage:@"请等待..."];
+    [KTVMainSvc postUpdateOrderStatus:params result:^(NSDictionary *result) {
+        [MBProgressHUD hiddenHUD];
+        if ([result[@"code"] isEqualToString:ktvCodeSuccess]) {
+            [KTVToast toast:toast];
+            [self loadNewMatchOrder];
+        } else {
+            [KTVToast toast:result[@"detail"]];
+        }
+    }];
 }
 
 #pragma mark - 事件
@@ -209,21 +238,16 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.section == 0) {
-        NSArray *imgUrls = @[@"https://4.bp.blogspot.com/-cSkCJRk_MXM/U5yaVSt2JJI/AAAAAAAA-S0/KSLqYLNoiyw/s0/Girl+fashion+beauty.jpg",
-                             @"https://s10.favim.com/orig/160322/beauty-girl-hair-makeup-Favim.com-4104900.jpg",
-                             @"https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1501749823122&di=b250a8c94d39c217440391f9e6696af2&imgtype=0&src=http%3A%2F%2Fpic.58pic.com%2F58pic%2F15%2F24%2F50%2F43Q58PICkj4_1024.jpg"];
-        
-        NSMutableArray *imgurlList = [NSMutableArray array];
+        NSMutableArray *imgUrlList = [NSMutableArray array];
         for (KTVBanner *banner in self.bannerList) {
-            [imgurlList addObject:banner.picture.pictureUrl];
+            [imgUrlList addObject:banner.picture.pictureUrl];
         }
-        
         KTVBannerCell *cell = (KTVBannerCell *)[tableView dequeueReusableCellWithIdentifier:KTVStringClass(KTVBannerCell)];
         if (!cell) {
             cell = [[KTVBannerCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:KTVStringClass(KTVBannerCell)];
         }
         cell.sdBannerView.delegate = self;
-        cell.sdBannerView.imageURLStringsGroup = imgUrls;
+        cell.sdBannerView.imageURLStringsGroup = imgUrlList;
         return cell;
     } else if (indexPath.section == 1) {
         weakify(self)
@@ -236,15 +260,18 @@
         };
         return cell;
     } else if (indexPath.section == 2) {
+        weakify(self);
         KTVOrderCell *cell = [tableView dequeueReusableCellWithIdentifier:@"KTVOrderCell"];
         cell.order = self.matchOrderList[indexPath.row];
         // 响应
         cell.responseOrderCB = ^(KTVOrder *order) {
-            
+            NSDictionary *params = @{@"subStoreId" : order.orderId, @"orderStatus" : @(4)};
+            [weakself changeOrderStatus:params successToast:@"响应成功"];
         };
         // 忽略
         cell.ignoreOrderCB = ^(KTVOrder *order) {
-            
+            NSDictionary *params = @{@"subStoreId" : order.orderId, @"orderStatus" : @(3)};
+            [weakself changeOrderStatus:params successToast:@"已忽略"];
         };
         // 确认消费
         cell.confirmConsumptionCB = ^(KTVOrder *order) {
@@ -259,6 +286,19 @@
 
 - (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index {
     CLog(@"--%@--main page banner click", @(index));
+    NSMutableArray *urlItems = @[].mutableCopy;
+    for (KTVBanner *banner in self.bannerList) {
+        KSPhotoItem *item = [KSPhotoItem itemWithSourceView:[UIImageView new] imageUrl:[NSURL URLWithString:banner.picture.pictureUrl]];
+        [urlItems addObject:item];
+    }
+    KSPhotoBrowser *browser = [KSPhotoBrowser browserWithPhotoItems:urlItems selectedIndex:index];
+    browser.delegate = self;
+    browser.dismissalStyle = KSPhotoBrowserInteractiveDismissalStyleRotation;
+    browser.backgroundStyle = KSPhotoBrowserBackgroundStyleBlur;
+    browser.loadingStyle = KSPhotoBrowserImageLoadingStyleIndeterminate;
+    browser.pageindicatorStyle = KSPhotoBrowserPageIndicatorStyleText;
+    browser.bounces = NO;
+    [browser showFromViewController:self];
 }
 
 #pragma mark - 地理位置相关
@@ -341,6 +381,25 @@
 - (void)PickerSelectorIndixString:(NSString *)str {
     NSArray *citys = [str componentsSeparatedByString:@" "];
     [self.locationBtn setTitle:citys[citys.count - 1] forState:UIControlStateNormal];
+}
+
+#pragma mark - KSPhotoBrowserDelegate
+
+- (void)ks_photoBrowser:(KSPhotoBrowser *)browser didSelectItem:(KSPhotoItem *)item atIndex:(NSUInteger)index {
+    NSLog(@"-->> %@", @(index));}
+
+#pragma mark - UIScrollViewDelegate
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    if ([self.homeSearchBar isFirstResponder]) {
+        [self.homeSearchBar resignFirstResponder];
+    }
+}
+
+#pragma mark - UISearchBarDelegate
+
+- (void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    [searchBar resignFirstResponder];
 }
 
 @end

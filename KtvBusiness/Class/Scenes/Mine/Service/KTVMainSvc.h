@@ -37,4 +37,10 @@ typedef void(^ResponseSuccess)(NSDictionary *result);
 /// 更新用户channelid
 + (void)postUpdateBPushChannel:(NSDictionary *)params result:(ResponseSuccess)responseResult;
 
+/// 更改订单状态
++ (void)postUpdateOrderStatus:(NSDictionary *)params result:(ResponseSuccess)responseResult;
+
+/// 获取首页banner
++ (void)getMainBanner:(NSString *)params result:(ResponseSuccess)responseResult;
+
 @end

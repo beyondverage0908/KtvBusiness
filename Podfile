@@ -13,6 +13,7 @@ pod 'SDWebImage', '~> 4.0'
 pod 'MBProgressHUD'
 pod 'IQKeyboardManager'
 pod 'MJRefresh', '~>3.1.13'
+pod 'YYWebImage', '~> 1.0.5'
 
 # 高德地图
 pod 'AMapLocation-NO-IDFA'  #定位功能

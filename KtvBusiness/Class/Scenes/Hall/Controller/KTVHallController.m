@@ -37,7 +37,8 @@
     safetyArray(self.pendingDealList);
     safetyArray(self.dealList);
     
-    self.currentOrderStatus = 1;
+    // 待处理 - 获取已支付的订单
+    self.currentOrderStatus = 0;
     
     // 默认请求待处理
     [self requestByOrderStatu:self.currentOrderStatus];
@@ -101,6 +102,20 @@
     }];
 }
 
+// 更改订单状态
+- (void)changeOrderStatus:(NSDictionary *)params successToast:(NSString *)toast {
+    [MBProgressHUD showMessage:@"请等待..."];
+    [KTVMainSvc postUpdateOrderStatus:params result:^(NSDictionary *result) {
+        [MBProgressHUD hiddenHUD];
+        if ([result[@"code"] isEqualToString:ktvCodeSuccess]) {
+            [KTVToast toast:toast];
+            [self requestByOrderStatu:self.currentOrderStatus];
+        } else {
+            [KTVToast toast:result[@"detail"]];
+        }
+    }];
+}
+
 #pragma mark - UITableViewDelegate
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -130,6 +145,21 @@
         order = self.dealList[indexPath.row];
     }
     cell.order = order;
+    weakify(self);
+    // 响应
+    cell.responseOrderCB = ^(KTVOrder *order) {
+        NSDictionary *params = @{@"subStoreId" : order.orderId, @"orderStatus" : @(4)};
+        [weakself changeOrderStatus:params successToast:@"响应成功"];
+    };
+    // 忽略
+    cell.ignoreOrderCB = ^(KTVOrder *order) {
+        NSDictionary *params = @{@"subStoreId" : order.orderId, @"orderStatus" : @(3)};
+        [weakself changeOrderStatus:params successToast:@"已忽略"];
+    };
+    cell.confirmConsumptionCB = ^(KTVOrder *order) {
+        NSDictionary *params = @{@"subStoreId" : order.orderId, @"orderStatus" : @(7)};
+        [weakself changeOrderStatus:params successToast:@"订单已经确认消费"];
+    };
     return cell;
 }
 
@@ -141,7 +171,7 @@
         {
             self.requestType = 0;
             // 待处理
-            self.currentOrderStatus = 1;
+            self.currentOrderStatus = 0;
             [self requestByOrderStatu:self.currentOrderStatus];
         }
             break;

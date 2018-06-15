@@ -197,7 +197,7 @@
 }
 
 + (NSString *)getOrderUpdateStatusUrl {
-    return @"/api/store/updateStatus";
+    return @"/api/order/updateStatus";
 }
 
 + (NSString *)postSearchOrderUrl {
