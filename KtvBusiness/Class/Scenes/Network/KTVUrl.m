@@ -86,6 +86,11 @@
     return @"/api/login/user/queryStore/";
 }
 
+/// 商家端查询门店订单接口
++ (NSString *)getOrderSearchStoreUrl {
+    return @"/api/order/searchStoreOrder";
+}
+
 #pragma mark - 用户动态
 
 + (NSString *)getUserDynamicStatementUrl {

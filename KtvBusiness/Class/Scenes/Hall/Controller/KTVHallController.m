@@ -69,37 +69,35 @@
 // 系统匹配的未响应的订单
 - (void)requestByOrderStatu:(NSInteger)orderStatu {
     // orderStatus 99:全部 -1:未支付，0,已支付, 1未响应，2未使用，3被商家忽略，4已响应，5待评论，，6已取消，7已结束
-    NSString *username = safetyString([KTVCommon userInfo].username);
-    NSNumber *ostatu = @(orderStatu);
-    //username = @"18939865729";
-    NSDictionary *params = @{@"username" : username, @"orderStatus" : ostatu};
-    
-    [MBProgressHUD showMessage:@"订单查询中..."];
-    [KTVMainSvc postSearchOrderParams:params result:^(NSDictionary *result) {
-        [self.tableview.mj_header endRefreshing];
-        [MBProgressHUD hiddenHUD];
-        if ([result[@"code"] isEqualToString:ktvCodeSuccess]) {
-            if ([result[@"data"] count] > 0) {
-                if (self.requestType == 0) {
-                    [self.pendingDealList removeAllObjects];
+    NSString *storeId = [KTVCommon getStoreId];
+    if (storeId) {
+        NSDictionary *params = @{@"storeId" : storeId, @"orderStatus" : @(orderStatu)};
+        [MBProgressHUD showMessage:@"订单查询中..."];
+        [KTVMainSvc postSearchStoreOrder:params result:^(NSDictionary *result) {
+            [self.tableview.mj_header endRefreshing];
+            [MBProgressHUD hiddenHUD];
+            if ([result[@"code"] isEqualToString:ktvCodeSuccess]) {
+                if ([result[@"data"] count] > 0) {
+                    if (self.requestType == 0) {
+                        [self.pendingDealList removeAllObjects];
+                    } else {
+                        [self.dealList removeAllObjects];
+                    }
                 } else {
-                    [self.dealList removeAllObjects];
+                    [KTVToast toast:@"暂无此条件订单"];
                 }
-            } else {
-                [KTVToast toast:@"暂无此条件订单"];
-            }
-            for (NSDictionary *dic in result[@"data"]) {
-                KTVOrder *order = [KTVOrder yy_modelWithDictionary:dic];
-                if (self.requestType == 0) {
-                    [self.pendingDealList addObject:order];
-                } else {
-                    [self.dealList addObject:order];
+                for (NSDictionary *dic in result[@"data"]) {
+                    KTVOrder *order = [KTVOrder yy_modelWithDictionary:dic];
+                    if (self.requestType == 0) {
+                        [self.pendingDealList addObject:order];
+                    } else {
+                        [self.dealList addObject:order];
+                    }
                 }
+                [self.tableview reloadData];
             }
-            
-            [self.tableview reloadData];
-        }
-    }];
+        }];
+    }
 }
 
 // 更改订单状态
@@ -148,16 +146,16 @@
     weakify(self);
     // 响应
     cell.responseOrderCB = ^(KTVOrder *order) {
-        NSDictionary *params = @{@"subStoreId" : order.orderId, @"orderStatus" : @(4)};
+        NSDictionary *params = @{@"subStoreId" : order.subOrderId, @"orderStatus" : @(2)};
         [weakself changeOrderStatus:params successToast:@"响应成功"];
     };
     // 忽略
     cell.ignoreOrderCB = ^(KTVOrder *order) {
-        NSDictionary *params = @{@"subStoreId" : order.orderId, @"orderStatus" : @(3)};
+        NSDictionary *params = @{@"subStoreId" : order.subOrderId, @"orderStatus" : @(3)};
         [weakself changeOrderStatus:params successToast:@"已忽略"];
     };
     cell.confirmConsumptionCB = ^(KTVOrder *order) {
-        NSDictionary *params = @{@"subStoreId" : order.orderId, @"orderStatus" : @(7)};
+        NSDictionary *params = @{@"subStoreId" : order.subOrderId, @"orderStatus" : @(7)};
         [weakself changeOrderStatus:params successToast:@"订单已经确认消费"];
     };
     return cell;
@@ -178,8 +176,8 @@
         case 1:
         {
             self.requestType = 1;
-            // 已响应
-            self.currentOrderStatus = 4;
+            // 商家已响应 == 用户未使用
+            self.currentOrderStatus = 2;
             [self requestByOrderStatu:self.currentOrderStatus];
         }
             break;

@@ -43,4 +43,7 @@ typedef void(^ResponseSuccess)(NSDictionary *result);
 /// 获取首页banner
 + (void)getMainBanner:(NSString *)params result:(ResponseSuccess)responseResult;
 
+/// 商家端查询门店订单接口
++ (void)postSearchStoreOrder:(NSDictionary *)params result:(ResponseSuccess)responseResult;
+
 @end

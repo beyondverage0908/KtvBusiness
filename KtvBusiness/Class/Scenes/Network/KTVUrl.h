@@ -160,6 +160,9 @@
 /// 根据距离查询门店
 + (NSString *)getLocalOrderUrl;
 
+/// 商家端查询门店订单接口
++ (NSString *)getOrderSearchStoreUrl;
+
 #pragma mark - 评论
 
 /// 创建评论

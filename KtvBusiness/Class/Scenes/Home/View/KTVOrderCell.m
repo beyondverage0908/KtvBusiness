@@ -62,7 +62,7 @@
     if (_order != order) {
         _order = order;
         
-        self.orderNoLabel.text = [NSString stringWithFormat:@"订单编号: %@", formatString(_order.orderId)];
+        self.orderNoLabel.text = [NSString stringWithFormat:@"订单编号: %@", formatString(_order.subOrderId)];
         self.nicknameLabel.text = formatString(_order.user.nickName);
         self.castTypeLabel.text = [NSString stringWithFormat:@"%@预定", formatString([KTVCommon orderDescriptionType:_order.orderType])];
         self.activityNickname.text = [NSString stringWithFormat:@"暖场人: %@", formatString(_order.store.user.nickName)];
@@ -70,12 +70,21 @@
         self.orderTimeLable.text = [NSString stringWithFormat:@"下单时间: %@", formatString(_order.createTime)];
         self.useTimeLabel.text = [NSString stringWithFormat:@"使用时间: %@", formatString(_order.startTime)];
         self.phoneLabel.text = [NSString stringWithFormat:@"电话: %@", formatString(_order.user.phone)];
+        
+        self.orderStatusLabel.hidden = NO;
+        self.responseBtn.hidden = NO;
+        self.ignoreBtn.hidden = NO;
+        self.confirmBtn.hidden = NO;
+        
         if (_order.orderStatus == 0) {
             self.orderStatusLabel.hidden = YES;
             self.confirmBtn.hidden = YES;
         } else if (_order.orderStatus == 1) {
             self.orderStatusLabel.hidden = YES;
             self.confirmBtn.hidden = YES;
+        } else if (_order.orderStatus == 2) {
+            self.responseBtn.hidden = YES;
+            self.ignoreBtn.hidden = YES;
         } else if (_order.orderStatus == 4) {
             self.responseBtn.hidden = YES;
             self.ignoreBtn.hidden = YES;

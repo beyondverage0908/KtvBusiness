@@ -56,10 +56,6 @@
                 [KTVCommon setUserInfoKey:@"phone" infoValue:account];
                 [KTVCommon setUserInfoKey:@"username" infoValue:account];
                 
-                if (weakself.loginSuccessBC) {
-                    weakself.loginSuccessBC();
-                }
-                
                 [weakself loadQueryStore];
             } else {
                 [KTVToast toast:result[@"detail"]];
@@ -81,12 +77,12 @@
             [MBProgressHUD hiddenHUD];
             if ([result[@"code"] isEqualToString:ktvCodeSuccess]) {
                 strongify(weakself);
-                if (strongSelf.loginSuccessBC) {
-                    strongSelf.loginSuccessBC();
-                }
                 if ([result[@"data"] count]) {
                     NSString *storeId = [NSString stringWithFormat:@"%@", [result[@"data"] firstObject]];
                     [KTVCommon saveStoreId:storeId];
+                }
+                if (strongSelf.loginSuccessBC) {
+                    strongSelf.loginSuccessBC();
                 }
             } else {
                 // 注销本地数据
